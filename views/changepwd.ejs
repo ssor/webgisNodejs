@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>修改密码</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">    
+    <link href="/stylesheets/index-theme.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/easyUI/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/easyUI/themes/icon.css">
+    <style type="text/css">
+        .demo-info {
+            background: #FFFEE6;
+            color: #8F5700;
+            padding: 12px;
+        }
+        .demo-tip {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            float: left;
+        }
+
+    </style>
+<script type="text/javascript" language="javascript" src="/javascripts/jquery.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.qrcode.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/javascripts/tools.js"></script>
+<script type="text/javascript">
+	 $(document).ready(function() {
+	 });
+	 function login(){
+	 	var currentPassword = $('#currentPassword')[0].value;
+	 	var newpassword1 = $('#newpassword1')[0].value;
+	 	var newpassword2 = $('#newpassword2')[0].value;
+	 	if(newpassword2 != newpassword1){
+	 		alert('两次输入的新密码不一致！');
+	 		return;
+	 	}
+	 	var obj = {currentPassword: currentPassword, newpassword: newpassword1};
+		var url = get_host_url() + "/postNewPassword";
+        $.post(url, obj, function(data){
+            if(data != ''){
+                console.log(data);
+
+            	if(data == 'ok'){
+            		console.log('change password success');
+                    alert('更改密码成功！','info');
+                    // alert('提示','更改密码成功！','info');
+
+            		window.location.href = get_host_url() + "/changePassword";
+            	}else{
+            		console.log('change password failed');
+                    // alert('提示','更改密码失败！','info');
+                    alert('更改密码失败！','info');
+            		window.location.href = get_host_url() + "/changePassword";
+            	}
+            }
+        });  
+	 }
+</script>
+</head>
+<body>
+    <h4 style="font-size: 20px; margin-top: 15px; margin-bottom: 15px;">修改密码</h4>
+    <div class="demo-info">
+        <div class="demo-tip icon-tip"></div>
+        <div>输入旧密码，设置新密码</div>
+    </div>
+    <div style="margin:10px 0;"></div>
+
+	<div class="container" id="tile_container" style="margin-bottom:80px;margin-left:0px; padding-left:0px;">
+		<form class="form-horizontal" role="form">
+		  <div class="form-group">
+		    <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4">
+		      <input type="password" class="form-control" id="currentPassword" placeholder="当前密码" >
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4">
+		      <input type="password" class="form-control" id="newpassword1" placeholder="输入新密码">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4">
+		      <input type="password" class="form-control" id="newpassword2" placeholder="再次输入新密码">
+		    </div>
+		  </div>		  
+		</form>	
+	    <div class="col-xs-10 col-sm-8 col-md-2 col-lg-2" style="padding-left: 0px; padding-right: 5px;margin-top: 10px;">
+			<button type="button" class="btn btn-primary btn-lg btn-block" onclick="login()">确定</button>
+	    </div>
+	</div>
+
+    <div class="description">
+        <h3>说明</h3>
+        <p></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{"_id":"OdbyC34qJD3bDXFo","planet":"Earth","system":"solar","inhabited":true,"humans":{"genders":2,"eyes":true}}
+{"_id":"PX0flyzeVjUfHtbo","completeData":{"planets":[{"name":"Earth","number":3},{"name":"Mars","number":2},{"name":"Pluton","number":9}]}}
+{"_id":"XJKazbi00d2QbmEW","planet":"Mars","system":"solar","inhabited":false,"satellites":["Phobos","Deimos"]}
+{"_id":"gBNMrS4qVdwt4sX4","planet":"Jupiter","system":"solar","inhabited":false}
+{"_id":"kXqVMe0BAe06HkC2","planet":"Omicron Persei 8","system":"futurama","inhabited":true,"humans":{"genders":7}}

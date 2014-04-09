@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>选择车辆</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link href="/stylesheets/index-theme.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/easyUI/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/easyUI/themes/icon.css">
+    <style type="text/css">
+        .demo-info {
+            background: #FFFEE6;
+            color: #8F5700;
+            padding: 12px;
+        }
+        .demo-tip {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            float: left;
+        }
+    </style>
+    <script src="/javascripts/jquery.min.js" type="text/javascript"></script> 
+    <script type="text/javascript" src="/easyUI/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/easyUI/locale/easyui-lang-zh_CN.js"></script>
+    <script src="/javascripts/tools.js" type="text/javascript"></script>  
+</head>
+<body>
+    <h2>选择车辆</h2>
+    <div class="demo-info">
+        <div class="demo-tip icon-tip"></div>
+        <div>选择您要监控的车辆</div>
+    </div>
+    <div style="margin:10px 0;"></div>
+    <div id="tb">
+        <a href="#" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="startMnt()">开始监控</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="refresh_grid()">刷新</a>
+    </div>
+    <table id = "grid1"></table>
+
+    <script type="text/javascript">
+    var toolbar = $('#tb');
+    var grid1 = $('#grid1');
+    var carTypes = <%- _carTypes %>;
+
+    $(function(){
+            $('#grid1').datagrid({
+                title:'车辆列表',
+                iconCls:'icon-blank',
+                width:'auto',
+                height:'auto',
+                fitColumns:true,
+                singleSelect:true,
+                idField:'userID',
+                toolbar: '#tb',
+                url:'/carList',
+                columns:[[
+                    {field:'carID',title:'车牌号',width:60,align:'center',
+                        editor:{
+                            type:'text',
+                            options:{
+                                required:true
+                            }
+                        }
+                    },
+
+                    {field:'carType',title:'车辆类型',width:80,align:'center',
+                        editor:{
+                            type:'combobox',
+                            options:{
+                                valueField:'typeCode',
+                                textField:'typeName',
+                                url:"/carTypeList",
+                                editable:false,
+                                required:true
+                            }
+                        },
+                        formatter:function(value){
+                            for(var i=0; i<carTypes.length; i++){
+                                if (carTypes[i].typeCode == value) return carTypes[i].typeName;
+                            }
+                            return '未知';
+                        }
+                    },
+
+                    {field:'note',title:'备注',width:80,align:'center',
+                        editor:{
+                            type:'text',
+                            options:{
+                                required:true
+                            }
+                        }
+                    }
+                ]]
+            });
+    });
+    function refresh_grid()
+    {
+        grid1.datagrid('reload');
+    }        
+
+    function startMnt(){
+        var rows = grid1.datagrid('getSelections');
+        if(rows.length > 0){
+            window.location.href = "/startMnting/"+ rows[0].carID;
+            return;             
+        }   
+    }   
+    </script>
+    <div class="description">
+        <h3>说明</h3>
+        <p></p>
+    </div>
+</body>
+</html>

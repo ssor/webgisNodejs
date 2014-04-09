@@ -1,0 +1,146 @@
+<!DOCTYPE html>  <meta charset="utf-8" />
+	<head>
+	  <title><%= _title %></title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+	  <style type="text/css">
+	        #title{
+	            margin-top: 0;
+	            background-color: rgb(50,50,50);
+	            margin-bottom: 2px;
+	            padding: 10px 0px 10px;
+	            color: white;
+	            text-align: center;
+	            font-size: 23px;
+	        }
+			body{
+				background-color: rgb(216,218,219);
+			}	        
+			.row-container{
+				border: rgb(205,205,205) 1px solid;
+				border-left-style: none;
+				border-right-style: none;
+				border-top-style: none;
+			}
+			.left-image{
+				width:100%;height:100%;max-width:48px;
+				margin-top: 0px;
+				margin-left: 15px;
+			}
+			.main-title{
+				font-size:150%;margin-top:1%;
+			}
+			.event-detail{
+				margin-top:2%;padding-bottom:2%;color:rgb(123,123,123);font-size:100%;
+			}
+	  </style>
+
+	<script type="text/javascript" src="/javascripts/jquery.js"> </script>
+	<script type="text/javascript" src="/javascripts/tools.js"> </script>
+	<script src="/bootstrap/js/bootstrap.min.js"> </script>
+	<script type="text/javascript" src = "/javascripts/underscore.js"></script>
+	<script language="javascript" type="text/javascript">
+		var output;
+		var carList = <%- _carList %>;
+		var elementIDList = [];
+
+		$(document).ready(function(){
+				$.ajaxSetup({cache:false});
+				onMessage(carList);
+		});
+		 function onMessage(_itemList){
+		  		_.each(_itemList, function(_item){//添加当前不存在的
+		  			updateTile(_item);
+		  		});		 	
+		 }		  
+		 function testalert(_id){
+		 	// if(_id == null) alert(null);
+		 	alert(_id); 
+		 }
+		function updateTile(_car){
+			var tile = $('#id_'+_car.carID);
+			var ele = '';
+			if(tile.length <= 0){
+				if(_car.classEnd != null){
+			  		ele='<div class="row  row-container" style="border: rgb(180,180,180) 4px solid; border-left-style: none; border-right-style: none; border-top-style: none;" id = "id_'+ _car.carID +'">'+
+								'<div class="col-xs-3 col-sm-3 col-md-2" >'+
+									'<img src="" class="left-image" id="id_image_'+ _car.carID +'">' +
+								'</div>'+
+				  				'<div class="col-xs-9 col-sm-9 col-md-10 col-lg-10 ">'+
+				  					'<div class="row">'+
+					  					'<div class="col-xs-12 col-sm-12 col-md-12 main-title" id = "id_main_title_'+ _car.carID +'">'+
+					  					'</div>'+
+				  					'</div>'+
+				  					'<div class="row">'+
+					  					'<div class="col-xs-12 col-sm-12 col-md-12 event-detail" id="id_event_detail_'+ _car.carID +'"></div>'+
+				  					'</div>'+	 
+				  				'</div>'+
+				  			'</div>';	
+				}else{
+			  		ele='<div class="row  row-container" id = "id_'+ _car.carID +'">'+
+								'<div class="col-xs-3 col-sm-3 col-md-2" >'+
+									'<img src="" class="left-image" id="id_image_'+ _car.carID +'">' +
+								'</div>'+
+				  				'<div class="col-xs-9 col-sm-9 col-md-10 col-lg-10 ">'+
+				  					'<div class="row">'+
+					  					'<div class="col-xs-12 col-sm-12 col-md-12 main-title" id = "id_main_title_'+ _car.carID +'">'+
+					  					'</div>'+
+				  					'</div>'+
+				  					'<div class="row">'+
+					  					'<div class="col-xs-12 col-sm-12 col-md-12 event-detail" id="id_event_detail_'+ _car.carID +'"></div>'+
+				  					'</div>'+	 
+				  				'</div>'+
+				  			'</div>';		
+				}
+  			
+		  			//ele += '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="height: 10px; background-color: rgb(206,205,205);"> </div>'; 
+	  			$('#tile_container').append(ele);
+
+				var row = $('#id_'+_car.carID);
+				row.bind('click', function(){
+					// testalert(_car.carID);
+					redirect_to_sub_form(_car.carID);
+				});
+			}
+		  	updateTitle(_car.carID, _car.mainText);
+		  	updateDetail(_car.carID, _car.subText);
+		  	updateIcon(_car.carID, _car.img);
+	  	}
+	  	function updateIcon(_ID, _img){
+	  		$('#id_image_'+_ID).attr('src', '/Image/'+_img);
+	  	}
+	  	function updateTitle(_ID, _text){
+		  	$('#id_main_title_'+_ID).text(_text);
+	  	}
+	  	function updateDetail(_ID, _text){
+		  	$('#id_event_detail_'+_ID).text(_text);
+	  	}
+
+	    function redirect_to_sub_form (id) {
+	        var host = get_host_url();
+	        // var host = window.location.href.substring(window.location.protocol.length);
+	        top.location.href = host + "/uploadgps/"+id;
+	        // body...
+	    }		
+	</script>
+  	</head>
+  	<body>
+    <div style="margin-bottom:-1px;">
+        <h3  id = "title">
+            <%= _title %>
+        </h3>    
+    </div>
+  		<div class="container" style="background-color: rgb(200,200,200);"> 
+		    <h5 style="color: rgb(120,120,120);">选择需要上传数据的车辆</h5>
+  		</div>
+  		<div class="container" id="tile_container"> </div>
+	  <div id="output"></div>
+  	</body>
+  </html>
+  
+  
+  
+  
+  
+  
+  

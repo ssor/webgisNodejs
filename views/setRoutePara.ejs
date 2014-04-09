@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>选择路径</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">    
+    <link href="/stylesheets/index-theme.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/easyUI/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/easyUI/themes/icon.css">
+    <style type="text/css">
+        .demo-info {
+            background: #FFFEE6;
+            color: #8F5700;
+            padding: 12px;
+        }
+        .demo-tip {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            float: left;
+        }
+        .control-label{
+            margin-left: -15px; margin-right: -20px; color: gray; font-size: 15px;
+        }
+    </style>
+<script type="text/javascript" language="javascript" src="/javascripts/jquery.js"></script>
+<!-- <script type="text/javascript" src="/javascripts/jquery.qrcode.min.js"></script> -->
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/javascripts/tools.js"></script>
+<script type="text/javascript">
+	 $(document).ready(function() {
+        var date = new Date();
+        $('#dateEnd')[0].value = date.format('yyyy-MM-dd');
+        date.setDate(date.getDate() - 1);
+        $('#dateStart')[0].value = date.format('yyyy-MM-dd');
+
+        $.post('/carList', null, function(data){
+            console.log('carList => ');
+            var cars = JSON.parse(data);
+            if(cars != null){
+                var selectCars = $("#selectCars");
+                for(var i=0; i< cars.length; i++){
+                    console.log(cars[i].carID);
+                    var ele = "<option value='";
+                    ele += cars[i].carID;
+                    ele += "'>"+ cars[i].carID +"</option>";
+                    selectCars.append(ele);
+                }
+            }
+        });
+	 });
+	 function setPara(){
+        var carID = $("#selectCars").val();
+        var dateStart = $('#dateStart')[0].value;
+	 	var dateEnd = $('#dateEnd')[0].value;
+        if(dateStart >= dateEnd){
+            alert('开始时间点必须在结束时间点之前！');
+            return;
+        }
+	 	var obj = {carID: carID, dateStart: dateStart, dateEnd: dateEnd};
+		var url = get_host_url() + "/postRoutePara";
+        $.post(url, obj, function(data){
+            if(data != ''){
+                console.log(data);
+            	if(data == 'ok'){
+            		console.log('postRoutePara success');
+
+            		window.location.href = "/startReplaying";
+            	}else{
+            		console.log('postRoutePara failed');
+                    alert('设置路径参数失败！');
+            	}
+            }
+        });  
+	 }
+</script>
+</head>
+<body>
+    <h4 style="font-size: 20px; margin-top: 15px; margin-bottom: 15px;">选择路径</h4>
+    <div class="demo-info" style="margin-bottom:25px;">
+        <div class="demo-tip icon-tip"></div>
+        <div>选择您要回放车辆的编号和时间段</div>
+    </div>
+    <div style="margin:10px 0;"></div>
+
+	<div class="container" id="tile_container" style="margin-bottom:80px;margin-left:0px; padding-left:0px;">
+		<form class="form-horizontal" role="form">
+		  <div class="form-group">
+            <label for="inputPassword3" class="col-xs-2 col-sm-2 col-md-2 control-label" style="">选择车辆</label>
+		    <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4">
+    		    <select class="form-control" id="selectCars">
+                </select>
+		    </div>
+		  </div>
+		  <div class="form-group">
+            <label for="inputPassword3" class="col-xs-2 col-sm-2 control-label" style="">开始时间点</label>
+		    <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4">
+		      <input type="date" class="form-control" id="dateStart" placeholder="">
+		    </div>
+		  </div>
+		  <div class="form-group">
+            <label for="inputPassword3" class="col-xs-2 col-sm-2 control-label" style="">结束时间点</label>
+		    <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4">
+		      <input type="date" class="form-control" id="dateEnd" placeholder="">
+		    </div>
+		  </div>		  
+		</form>	
+	    <div class="col-xs-10 col-sm-8 col-md-2 col-lg-2" style="padding-left: 0px; padding-right: 5px;margin-top: 10px;">
+			<button type="button" class="btn btn-primary btn-lg btn-block" onclick="setPara()" style="margin-left:90px;">确定</button>
+	    </div>
+	</div>
+
+    <div class="description">
+        <h3>说明</h3>
+        <p></p>
+    </div>
+</body>
+</html>

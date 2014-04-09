@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>管理页面</title>
+<meta http-equiv=Content-Type content=text/html;charset=utf-8>
+<script language=JavaScript1.2>
+	    function logout() {
+	        var r = confirm("确定要退出吗？")
+	        if (r == true) {
+	            top.location.href = '/logout';
+	            //top.location.href = window.location.pathname +'/Welcome/logout';
+	        }
+	    }
+</script>
+<base target="main">
+<link href="/stylesheets/skin.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="0" topmargin="0">
+
+	<div class = "divTopbg">
+	
+		<label  class="admin_txt">欢迎您 <%= nickname %> ，感谢登录使用！</label>
+		<a href="javascript:void(null)" onclick="logout()" class = "top_logout"><img src="/Image/out.gif" alt="安全退出" width="46" height="20" border="0"></a>
+	</div>
+	<div class = "divLogo">
+	</div>	
+	
+</body>
+</html>

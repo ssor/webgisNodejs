@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>车辆列表</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link href="/stylesheets/index-theme.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/easyUI/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/easyUI/themes/icon.css">
+    <style type="text/css">
+        .demo-info {
+            background: #FFFEE6;
+            color: #8F5700;
+            padding: 12px;
+        }
+        .demo-tip {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            float: left;
+        }
+
+    </style>
+    <script src="/javascripts/jquery.min.js" type="text/javascript"></script> 
+    <script type="text/javascript" src="/easyUI/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/easyUI/locale/easyui-lang-zh_CN.js"></script>
+    <script src="/javascripts/tools.js" type="text/javascript"></script>  
+</head>
+<body>
+    <h2>车辆列表</h2>
+    <div class="demo-info">
+        <div class="demo-tip icon-tip"></div>
+        <div>增加和删除运输的车辆</div>
+    </div>
+    <div style="margin:10px 0;"></div>
+    
+
+    <div id="tb">
+        <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="refresh_grid()">刷新</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="insert()">增加</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deleteRows()">删除</a>
+        <!-- <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="test()">测试</a>         -->
+    </div>
+    <table id = "grid1"></table>
+
+    <script type="text/javascript">
+    var toolbar = $('#tb');
+    var grid1 = $('#grid1');
+    var carTypes = <%- _carTypes %>;
+
+    $(function(){
+            $('#grid1').datagrid({
+                title:'列表',
+                iconCls:'icon-edit',
+                width:'auto',
+                height:'auto',
+                fitColumns:true,
+                singleSelect:true,
+                idField:'userID',
+                toolbar: '#tb',
+                url:'/carList',
+                columns:[[
+                    {field:'carID',title:'车牌号',width:60,align:'center',
+                        editor:{
+                            type:'text',
+                            options:{
+                                required:true
+                            }
+                        }
+                    },
+
+                    {field:'carType',title:'车辆类型',width:80,align:'center',
+                        editor:{
+                            type:'combobox',
+                            options:{
+                                valueField:'typeCode',
+                                textField:'typeName',
+                                url:"/carTypeList",
+                                editable:true,
+                                required:true
+                            }
+                        },
+                        formatter:function(value){
+                            for(var i=0; i<carTypes.length; i++){
+                                if (carTypes[i].typeCode == value) return carTypes[i].typeName;
+                            }
+                            return '未知';
+                        }
+                    },
+
+                    {field:'timeStamp',title:'加入时间',width:80,align:'center',
+                        editor:{
+                            // type:'text',
+                            options:{
+                                required:true
+                            }
+                        }
+                    },
+
+                    {field:'note',title:'备注',width:80,align:'center',
+                        editor:{
+                            type:'text',
+                            options:{
+                                required:true
+                            }
+                        }
+                    },
+
+                    // {field:'resource_note',title:'说明',width:180,editor:'text'},
+                    {field:'action',title:'',width:50,align:'center',
+                        formatter:function(value,row,index){
+                            if (row.editing){
+                                var s = '<a href="#" onclick="saverow(this)">保存</a> ';
+                                var c = '<a href="#" onclick="cancelrow(this)">取消</a>';
+                                return s+c;
+                            } else {
+                                var e = '<a href="#" onclick="editrow(this)">编辑</a> ';
+                                return e;
+                            }
+                        }
+                    }
+                ]],
+                // rowStyler: function(index,row){
+                //     if ((index % 2) != 0){
+                //         return 'background-color:#f3f3f3;color:#000;';
+                //     }
+                // },
+
+                onBeforeEdit:function(index,row){
+                    row.editing = true;
+                    updateActions(index);
+                },
+                onAfterEdit:function(index,row){
+                    row.editing = false;
+                    updateActions(index);
+                },
+                onCancelEdit:function(index,row){
+                    row.editing = false;
+                    updateActions(index);
+                }
+            });
+        });
+
+    function updateActions(index){
+        grid1.datagrid('updateRow',{
+            index: index,
+            row:{}
+        });
+    }
+    function getRowIndex(target){
+        var tr = $(target).closest('tr.datagrid-row');
+        return parseInt(tr.attr('datagrid-row-index'));
+    }
+    function editrow(target){
+        grid1.datagrid('beginEdit', getRowIndex(target));
+    }
+
+    function saverow(target)
+    {
+        var index = getRowIndex(target);
+        grid1.datagrid('endEdit', index);
+        var rows = grid1.datagrid('getRows');
+        var row = rows[index];
+        if(row.carID == undefined || row.carID == '' || row.carType == undefined || row.carType == ''){
+            $.messager.alert('提示','车牌号和类型是必须填写的！','info');
+            grid1.datagrid('beginEdit', index);
+            return;
+        }
+        else{
+            var json = {carID: row.carID, carType: row.carType, note: row.note};
+            $.ajax({
+                url: "/addCar",
+                data: json,
+                // data: JSON.stringify(json),
+                // data: { data: JSON.stringify(json) },
+                type: "post",
+                // contentType: "text/plain",
+                success: function (text) {
+                    // alert(text);
+                    if(text == "ok")
+                    {
+                        $.messager.alert('提示','操作成功！');               
+                    }
+                    else if(text == 'duplicated')
+                    {
+                        $.messager.alert('提示','该车辆已经登记！', 'warning');             
+                    }else{
+                        $.messager.alert('提示','操作出现异常！', 'warning');             
+
+                    }
+                    refresh_grid();
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert(jqXHR.responseText);
+                }
+            });
+            refresh_grid();
+        }
+    }
+    function cancelrow(target){
+        refresh_grid();
+    }
+    function refresh_grid()
+    {
+        grid1.datagrid('reload');
+    }        
+    function insert(){
+        var row = grid1.datagrid('getSelected');
+        if (row){
+            var index = grid1.datagrid('getRowIndex', row);
+        } else {
+            index = 0;
+        }
+        if(index < 0) index = 0;
+        grid1.datagrid('insertRow', {
+            index: index,
+            row:{
+                // status:'P'
+            }
+        });
+        grid1.datagrid('selectRow',index);
+        grid1.datagrid('beginEdit',index);
+    }
+    function deleteRows()
+    {
+        $.messager.confirm('确认','删除该信息将无法恢复，确定删除吗？',function(r){
+            if (r){
+                var rows = grid1.datagrid('getSelections');
+                if(rows.length > 0){
+                    var json = {carID: rows[0].carID};
+                    $.ajax({
+                        url: "/deleteCar",
+                        // contentType: "text/plain",
+                        // data: JSON.stringify(json),
+                        data: json,
+                        type: "post",
+                        success: function (text) {
+                            if(text == "ok")
+                            {
+                                $.messager.alert('提示','操作成功！','info');
+                            }
+                            else
+                            {
+                                $.messager.alert('提示','操作出现异常！','info');
+                            }
+                            refresh_grid();
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            alert(jqXHR.responseText);
+                            refresh_grid();
+                        }
+                    });                
+                    refresh_grid();                    
+                }
+
+            }
+        });     
+    }   
+    </script>
+    <div class="description">
+        <h3>说明</h3>
+        <p></p>
+    </div>
+
+
+ 
+</body>
+</html>
