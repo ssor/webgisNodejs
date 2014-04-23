@@ -12,9 +12,31 @@ globalEP.tail('newBagage', insertBagageCarBinding2DB);
 globalEP.tail('eventRemoveBagage', removeBagageCarBindingFromDB);
 globalEP.tail('eventInsertBagageCarBindingRecord2DB', insertBagageCarBindingRecord2DB);
 
+exports.bagageLoginIndex = function(req, res){
+	res.render('bagageLoginIndex');
+}
 exports.bagageStatusIndex = function(req, res){
 	var bagageID = req.params.bagageID;
 	res.render('bagageStatusIndex', {bagageID: bagageID});
+}
+exports.getBagageExits = function(req, res){
+	var bagageID = req.params.bagageID;
+	var selector = {bagageID: bagageID};
+	var localEP = new EventProxy();
+	localEP.fail(function(error){
+		res.send('error');
+		return;
+	})
+	bagagedb.find(selector, localEP.doneLater('getBagageOver'));
+	localEP.once('getBagageOver', function(_bagages){
+		// console.log('getBagageOver...'.info);
+		// console.dir(_bagages);
+		if(_.size(_bagages) <= 0){
+			res.send('failed');return;
+		}else{
+			res.send('ok');
+		}
+	});
 }
 exports.getBagageStatus = function(req, res){
 	var bagageID = req.body.bagageID;

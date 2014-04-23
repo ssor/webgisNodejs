@@ -95,7 +95,8 @@ app.post('/removeBagageCarBinding', bagage.removeBagageCarBinding);
 app.post('/gerBagageRecord', bagage.gerBagageRecord);
 app.get('/bagageStatusIndex/:bagageID', bagage.bagageStatusIndex);
 app.post('/getBagageStatus', bagage.getBagageStatus);
-
+app.get('/b', bagage.bagageLoginIndex);
+app.get('/getBagageExits/:bagageID', bagage.getBagageExits);
 
 // app.post('/mobileCarList', mobileClient.carList);
 app.get('/mobile', mobileClient.index);
