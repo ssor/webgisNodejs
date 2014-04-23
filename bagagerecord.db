@@ -1,0 +1,5 @@
+{"carID":"xcar2","bagageID":"b003","note":"","timeStamp":"2014-04-22 09:53:49","owner":"admin","_id":"LP2v3HWILZrODejo","event":"bindBagageAndCar"}
+{"carID":"xcar2","bagageID":"b003","timeStamp":"2014-04-22 09:59:22","owner":"admin","event":"unbindBagageAndCar","_id":"crUdMIO2i8q8YSNf"}
+{"carID":"xcar1","bagageID":"a001","note":"xcar1&a001","timeStamp":"2014-04-22 09:50:16","owner":"admin","_id":"izHZuVW91qDCArN4","event":"bindBagageAndCar"}
+{"carID":"xcar1","bagageID":"a002","note":"xcar1&a002","timeStamp":"2014-04-22 09:52:53","owner":"admin","_id":"sBxAapZNWR0tMFB1","event":"bindBagageAndCar"}
+{"carID":"xcar2","bagageID":"b002","note":"xcar1&a002","timeStamp":"2014-04-22 09:53:41","owner":"admin","_id":"uvzDkRnZBkYU7fsB","event":"bindBagageAndCar"}

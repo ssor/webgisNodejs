@@ -32,6 +32,7 @@
 	<script type="text/javascript" src="http://api.go2map.com/maps/js/api_v2.5.js"></script>
 	<script	type="text/javascript" language="javascript">
 		var cars = [{carID: '<%= carID %>'}];
+		var bagageID = '<%= bagageID %>';
 		var carWithMarkArray = null;
 		var	g_map = null;
 		var	isMonitoring;
@@ -180,11 +181,11 @@
 			var vDate = Point.timeStamp.substring(0,10);
 			var vTime = Point.timeStamp.substring(11,19);
 			html += tr("车牌：", Point.carID);
-			// html += tr("单号：", "");
+			html += tr("单号：", bagageID);
 			html += tr("日期：", vDate);
 			html += tr("时间：", vTime);
-			html += tr("经度：", lng);
-			html += tr("纬度：", lat);               
+			// html += tr("经度：", lng);
+			// html += tr("纬度：", lat);               
 
 		  	html += '</table></div>';
 		  	return html;

@@ -1,6 +1,9 @@
 
 carPointDBList = [];
-
+globalEP = null;
+LATEST_POINT_INTERVAL = 15;//计算默认最近上传点时候的最大时间间隔，超过这个时间认为最近没有上传位置数据
+MIN_INTERVAL_FOR_REFRESH_CAR_POSITION_MAP = 15;//second
+latestCarPointList = [];
 
 /**
  * Module dependencies.
@@ -20,13 +23,21 @@ colors.setTheme({
   error: 'red'
 });
 var EventProxy = require('eventproxy');
-ep = new EventProxy();
+globalEP = new EventProxy();
+
+var Datastore  = require('nedb');
+cardb      = new Datastore({ filename: 'car.db', autoload: true });
+bagagedb      = new Datastore({ filename: 'bagage.db', autoload: true });
+userdb      = new Datastore({ filename: 'user.db', autoload: true });
+bagageRecordDB = new Datastore({ filename: 'bagagerecord.db', autoload: true });
 
 var express = require('express');
 var routes = require('./routes');
 var user = require('./routes/user');
 var car = require('./routes/car');
 var mobileClient = require('./routes/mobile');
+var bagage = require('./routes/bagage');
+
 var http = require('http');
 var path = require('path');
 
@@ -61,6 +72,7 @@ app.get('/top', routes.top);
 app.get('/main', routes.main);
 app.get('/chooseCarToMnt', routes.chooseCarToMnt);
 app.get('/startMnting/:carID', routes.startMnting);
+app.get('/startBagageMnting/:bagageID', routes.startBagageMnting);
 app.get('/logout', routes.logout);
 
 app.post('/userList', user.list);
@@ -75,6 +87,15 @@ app.get('/carIndex', car.index);
 app.post('/addCar', car.addCar);
 app.post('/deleteCar', car.deleteCar);
 app.post('/carTypeList', car.carTypeList);
+
+app.post('/bagageList', bagage.bagageList);
+app.get('/bagageIndex', bagage.index);
+app.post('/addBagageCarBinding', bagage.addBagageCarBinding);
+app.post('/removeBagageCarBinding', bagage.removeBagageCarBinding);
+app.post('/gerBagageRecord', bagage.gerBagageRecord);
+app.get('/bagageStatusIndex/:bagageID', bagage.bagageStatusIndex);
+app.post('/getBagageStatus', bagage.getBagageStatus);
+
 
 // app.post('/mobileCarList', mobileClient.carList);
 app.get('/mobile', mobileClient.index);

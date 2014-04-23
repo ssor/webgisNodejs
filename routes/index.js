@@ -1,12 +1,18 @@
 
 var Datastore  = require('nedb');
-var planetdb      = new Datastore({ filename: 'planet.db', autoload: true });
+// var planetdb      = new Datastore({ filename: 'planet.db', autoload: true });
 var _          = require('underscore');
 var EventProxy = require('eventproxy');
 var authorize = require('./authorize');
 var userModule = require('./user');
 var carModule = require('./car');
+var bagageModule = require('./bagage');
+var checkMemoryModule = require('./checkMemory');
+require('./saveCarPosImg');
 //************************************************************************************
+
+globalEP.emitLater('initialCarPointDB');
+// setInterval(checkMemoryModule.checkMemory, 1000);
 
 exports.logout = function(req, res){
 	req.session.destroy();
@@ -85,7 +91,15 @@ exports.startMnting = function(req, res){
 	console.log('startMnting : ' + req.params.carID);
 	res.render('startMnting', {carID: req.params.carID});
 }
-
+exports.startBagageMnting = function(req, res){
+	var bagageID = req.params.bagageID;
+	console.log('startBagageMnting : ' + bagageID);
+	var localEP = new EventProxy();
+	bagageModule.getBindedCarID(bagageID, localEP);
+	localEP.once('getBindedCarIDOver', function(_carID){
+		res.render('startBagageMnting', {bagageID: bagageID, carID: _carID});
+	});
+}
 //************************************************************************************
 // just test
 // createExampleCollection();

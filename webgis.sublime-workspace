@@ -4,8 +4,172 @@
 		"selected_items":
 		[
 			[
+				"che",
+				"checkChangeTrend"
+			],
+			[
+				"tr",
+				"trendsRise"
+			],
+			[
+				"M",
+				"MAX_HISTORY_YEAR"
+			],
+			[
+				"he",
+				"heapTotal"
+			],
+			[
+				"meu",
+				"memuse"
+			],
+			[
+				"mem",
+				"memoryLasted"
+			],
+			[
+				"me",
+				"memoryLasted"
+			],
+			[
+				"um",
+				"usedMemPercent"
+			],
+			[
+				"se",
+				"session"
+			],
+			[
+				"car",
+				"carID"
+			],
+			[
+				"dat",
+				"dateEnd"
+			],
+			[
+				"ca",
+				"cars"
+			],
+			[
+				"sel",
+				"selectCars"
+			],
+			[
+				"el",
+				"earliestPoint"
+			],
+			[
+				"_p",
+				"_point"
+			],
+			[
+				"get",
+				"getPointListFromDBOver"
+			],
+			[
+				"er",
+				"err"
+			],
+			[
 				"la",
-				"lastChild"
+				"latestPoint"
+			],
+			[
+				"ins",
+				"insertCarPoint"
+			],
+			[
+				"db",
+				"dbInfo"
+			],
+			[
+				"ge",
+				"getCarListOfSpecifiedUser"
+			],
+			[
+				"lo",
+				"localEP"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"_c",
+				"_car"
+			],
+			[
+				"te",
+				"testA"
+			],
+			[
+				"carty",
+				"carTypeList"
+			],
+			[
+				"user",
+				"userdb"
+			],
+			[
+				"us",
+				"user"
+			],
+			[
+				"usn",
+				"username"
+			],
+			[
+				"err",
+				"error"
+			],
+			[
+				"log",
+				"logout"
+			],
+			[
+				"fin",
+				"findOne"
+			],
+			[
+				"use",
+				"user"
+			],
+			[
+				"add",
+				"addUser"
+			],
+			[
+				"nu",
+				"numberReplaced"
+			],
+			[
+				"do",
+				"documentHeight"
+			],
+			[
+				"fo",
+				"footer"
+			],
+			[
+				"cont",
+				"container"
+			],
+			[
+				"win",
+				"windowHeight"
+			],
+			[
+				"ja",
+				"javascripts"
+			],
+			[
+				"ch",
+				"check_geolocation_support"
+			],
+			[
+				"mo",
+				"mobileClient"
 			],
 			[
 				"del",
@@ -60,10 +224,6 @@
 				"findWhere"
 			],
 			[
-				"fin",
-				"findedTag"
-			],
-			[
 				"rea",
 				"readTagList"
 			],
@@ -88,24 +248,12 @@
 				"requestListTypeInfo"
 			],
 			[
-				"lo",
-				"logicEP"
-			],
-			[
 				"Inv",
 				"InventoryLogic"
 			],
 			[
-				"add",
-				"added"
-			],
-			[
 				"bra",
 				"broadcastTagInfo"
-			],
-			[
-				"ch",
-				"checkTagChanges"
 			],
 			[
 				"fun",
@@ -164,10 +312,6 @@
 				"clearAllItems"
 			],
 			[
-				"tr",
-				"truePredictMap"
-			],
-			[
 				"cur",
 				"currentExistsTagList"
 			],
@@ -190,10 +334,6 @@
 			[
 				"ini",
 				"initialChart_misreading"
-			],
-			[
-				"dat",
-				"dataSeriesMisreading"
 			],
 			[
 				"an",
@@ -332,10 +472,6 @@
 				"statusCode"
 			],
 			[
-				"_p",
-				"_epcResponse"
-			],
-			[
 				"grou",
 				"group"
 			],
@@ -376,144 +512,8 @@
 				"font-size"
 			],
 			[
-				"mar",
-				"margin-bottom"
-			],
-			[
 				"ba",
 				"background-color"
-			],
-			[
-				"fl",
-				"floorBackground"
-			],
-			[
-				"ex",
-				"exports"
-			],
-			[
-				"uni",
-				"uniqList"
-			],
-			[
-				"bif",
-				"bIfReadCountTooLittle"
-			],
-			[
-				"_ke",
-				"_keyEpc"
-			],
-			[
-				"un",
-				"uniqList"
-			],
-			[
-				"map",
-				"mapMinus"
-			],
-			[
-				"too",
-				"tooLargeResult"
-			],
-			[
-				"ma",
-				"mapMinus"
-			],
-			[
-				"le",
-				"length"
-			],
-			[
-				"sor",
-				"sortedList"
-			],
-			[
-				"if",
-				"ifExist"
-			],
-			[
-				"ifp",
-				"ifPrintMisReading"
-			],
-			[
-				"ta",
-				"tagList"
-			],
-			[
-				"li",
-				"listeningPort"
-			],
-			[
-				"sen",
-				"sendRawTagInfo"
-			],
-			[
-				"de",
-				"destPort"
-			],
-			[
-				"modal-d",
-				"modal-detail-img"
-			],
-			[
-				"he",
-				"head"
-			],
-			[
-				"marg",
-				"margin-bottom"
-			],
-			[
-				"h",
-				"height"
-			],
-			[
-				"item",
-				"itemQuantity"
-			],
-			[
-				"conte",
-				"contest"
-			],
-			[
-				"aj",
-				"ajaxContests"
-			],
-			[
-				"te",
-				"testajax"
-			],
-			[
-				"tes",
-				"testobj"
-			],
-			[
-				"nod",
-				"nodeContest"
-			],
-			[
-				"no",
-				"nodeContestTime"
-			],
-			[
-				"cont",
-				"contest"
-			],
-			[
-				"ut",
-				"utf8Contest"
-			],
-			[
-				"en",
-				"encode"
-			],
-			[
-				"gb",
-				"gb2312"
-			],
-			[
-				"utf",
-				"utf-8"
 			]
 		]
 	},
@@ -523,15 +523,151 @@
 			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 1218,
+				"buffer_size": 2533,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "routes/epc.js",
+			"file": "views/index.ejs",
 			"settings":
 			{
-				"buffer_size": 784,
+				"buffer_size": 3142,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/main.ejs",
+			"settings":
+			{
+				"buffer_size": 679,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/top.ejs",
+			"settings":
+			{
+				"buffer_size": 806,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/left.ejs",
+			"settings":
+			{
+				"buffer_size": 5146,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/chooseCarToMnt.ejs",
+			"settings":
+			{
+				"buffer_size": 3880,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/carIndex.ejs",
+			"settings":
+			{
+				"buffer_size": 9412,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/right.ejs",
+			"settings":
+			{
+				"buffer_size": 3028,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/startMnting.ejs",
+			"settings":
+			{
+				"buffer_size": 5709,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/userIndex.ejs",
+			"settings":
+			{
+				"buffer_size": 8640,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/changepwd.ejs",
+			"settings":
+			{
+				"buffer_size": 3585,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/mobileIndex.ejs",
+			"settings":
+			{
+				"buffer_size": 4784,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/uploadgps.ejs",
+			"settings":
+			{
+				"buffer_size": 7985,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/mobile.js",
+			"settings":
+			{
+				"buffer_size": 5508,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/startReplaying.ejs",
+			"settings":
+			{
+				"buffer_size": 8019,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/setRoutePara.ejs",
+			"settings":
+			{
+				"buffer_size": 4623,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/javascripts/tools.js",
+			"settings":
+			{
+				"buffer_size": 1760,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/defCar.js",
+			"settings":
+			{
+				"buffer_size": 245,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/car.js",
+			"settings":
+			{
+				"buffer_size": 3148,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,7 +675,31 @@
 			"file": "routes/index.js",
 			"settings":
 			{
-				"buffer_size": 10760,
+				"buffer_size": 13186,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/checkMemory.js",
+			"settings":
+			{
+				"buffer_size": 2220,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/authorize.js",
+			"settings":
+			{
+				"buffer_size": 182,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/user.js",
+			"settings":
+			{
+				"buffer_size": 4217,
 				"line_ending": "Unix"
 			}
 		}
@@ -568,6 +728,23 @@
 	},
 	"file_history":
 	[
+		"/Users/ssor/Documents/program/nodejs/webgis/public/javascripts/timeFormat.js",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/mobileIndex2.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/uploadgps2.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/f7form.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/public/stylesheets/framework7.css",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/changepwd.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/public/stylesheets/skin.css",
+		"/Users/ssor/Desktop/webgis/Tpl/Monitor/startMnting.html",
+		"/Users/ssor/Desktop/webgis/Tpl/Monitor/chooseCartoMnt.html",
+		"/Users/ssor/Desktop/webgis/Tpl/Mobile/index.html",
+		"/Users/ssor/Desktop/webgis/Tpl/Monitor/index.html",
+		"/Users/ssor/Desktop/webgis/Tpl/Monitor/top.html",
+		"/Users/ssor/Desktop/webgis/Tpl/Monitor/left.html",
+		"/Users/ssor/Desktop/webgis/Tpl/Monitor/right.html",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/mobileIndex.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/routes/epc.js",
+		"/Users/ssor/Desktop/webgis/Tpl/UserManagement/UserIndex.html",
 		"/Users/ssor/Documents/program/nodejs/weathermonitor/public/javascripts/tools.js",
 		"/Users/ssor/Documents/program/nodejs/carbinetShow/routes/timeFormat.js",
 		"/Users/ssor/Documents/program/nodejs/carbinetShow/views/carbinet3.ejs",
@@ -631,6 +808,77 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"memmoryMin",
+			"memoryLasted",
+			"planetdb",
+			"carID",
+			"endTime",
+			"RouteReplay_SetPointMarkOnMap",
+			"carRoutePoint",
+			"CarRoutePoint",
+			"}\n",
+			"requestData",
+			"} ",
+			"JsonToStr",
+			"ajaxGetRequestComplete",
+			"myDate",
+			"data",
+			"getPointListFromDB",
+			"gPoint",
+			"cardb",
+			"initialCarPointDB",
+			"div",
+			"itemID",
+			"_item",
+			"itemList",
+			"data",
+			"date2str",
+			"_item",
+			"updateTile",
+			"itemID",
+			"writeToScreen",
+			"addElementIDToList",
+			"loopToGetEventInfo",
+			");\n",
+			"addElementIDToList",
+			"elementIDList",
+			"img",
+			"itemTypes",
+			"username",
+			"authorize",
+			"newpassword",
+			"currentPassword",
+			"h3",
+			"false",
+			";\n",
+			"strTime",
+			"postgps",
+			"g_mark",
+			"carID",
+			"CarID",
+			"carid",
+			"carID",
+			"carid",
+			"CarID",
+			"carid",
+			"carID",
+			"g_infowindow",
+			"getRowIndex",
+			"top",
+			"__PUBLIC__",
+			"Images",
+			"left",
+			"right",
+			"5",
+			"itemID",
+			"userID",
+			"userName",
+			"userID",
+			"user",
+			"users",
+			"addUser",
+			"deleteUser",
+			"db",
 			"epcdb",
 			"WebSocket",
 			"websocket",
@@ -687,78 +935,7 @@
 			"inventoryUnit",
 			"getCurrentExistsTagList",
 			"minTagReadedConfirmCount",
-			"checkTagExist",
-			"\");\n",
-			"server",
-			"parser",
-			"this",
-			"slef",
-			"this",
-			"_listeningPort",
-			"createConnectionSSL",
-			"removeSocket",
-			"tagList",
-			"server",
-			"Tag",
-			"tag",
-			"Tag",
-			"tag",
-			"Tag",
-			"tag",
-			"Tag",
-			"tag",
-			"Tag",
-			"timeFormater",
-			"minTagReadedConfirmCount",
-			"addItem",
-			"addItemToFloor",
-			"removeItemByEPC",
-			"maxTagReadInterval",
-			"websocketEventCenter",
-			"maxTagReadInterval",
-			"79",
-			"EpcServerIP",
-			"find",
-			"maxTagReadInterval",
-			"_currentExistsEpcs",
-			"currentExistsTagList",
-			"updateShowTile",
-			"addItemToFloor",
-			");\n",
-			"dataSeries",
-			"initialChart",
-			"container",
-			"tagAntenaChanged",
-			"tagDeleted",
-			"tagAdded",
-			"tagDeleted",
-			"lastExistsTagList",
-			"currentExistsEpcs",
-			"tagAlwaysExists",
-			"readCount",
-			"_record",
-			"startServer",
-			"startUDPListening",
-			"guid",
-			"listeningPort",
-			"minTagReadedConfirmCount",
-			"maxTagReadInterval",
-			"timeFormater",
-			"guid",
-			"testSync",
-			"format",
-			"for",
-			"console",
-			"\n});",
-			"strDst",
-			"console",
-			"wsUriEventCenter",
-			"WebSocket",
-			"websocket",
-			"WebSocket",
-			"websocket",
-			"WebSocket",
-			"websocket"
+			"checkTagExist"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -776,7 +953,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 20,
 			"sheets":
 			[
 				{
@@ -784,20 +961,346 @@
 					"file": "app.js",
 					"settings":
 					{
-						"buffer_size": 1218,
+						"buffer_size": 2533,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								219,
-								219
+								674,
+								674
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 124.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views/index.ejs",
+					"settings":
+					{
+						"buffer_size": 3142,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2421,
+								2421
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 717.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "views/main.ejs",
+					"settings":
+					{
+						"buffer_size": 679,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								545,
+								545
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "views/top.ejs",
+					"settings":
+					{
+						"buffer_size": 806,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								250,
+								250
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "views/left.ejs",
+					"settings":
+					{
+						"buffer_size": 5146,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4176,
+								4176
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2812.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "views/chooseCarToMnt.ejs",
+					"settings":
+					{
+						"buffer_size": 3880,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3739,
+								3739
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1046.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "views/carIndex.ejs",
+					"settings":
+					{
+						"buffer_size": 9412,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								686,
+								697
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 187.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "views/right.ejs",
+					"settings":
+					{
+						"buffer_size": 3028,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1114,
+								1114
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1127.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "views/startMnting.ejs",
+					"settings":
+					{
+						"buffer_size": 5709,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								767,
+								772
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "views/userIndex.ejs",
+					"settings":
+					{
+						"buffer_size": 8640,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								145,
+								156
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 9.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "views/changepwd.ejs",
+					"settings":
+					{
+						"buffer_size": 3585,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2029,
+								2029
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "views/mobileIndex.ejs",
+					"settings":
+					{
+						"buffer_size": 4784,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4517,
+								4661
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1892.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "views/uploadgps.ejs",
+					"settings":
+					{
+						"buffer_size": 7985,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7661,
+								7661
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -808,19 +1311,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "routes/epc.js",
+					"buffer": 13,
+					"file": "routes/mobile.js",
 					"settings":
 					{
-						"buffer_size": 784,
+						"buffer_size": 5508,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								4646,
+								4646
 							]
 						],
 						"settings":
@@ -835,19 +1338,128 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "routes/index.js",
+					"buffer": 14,
+					"file": "views/startReplaying.ejs",
 					"settings":
 					{
-						"buffer_size": 10760,
+						"buffer_size": 8019,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								247,
-								247
+								5531,
+								5531
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3127.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "views/setRoutePara.ejs",
+					"settings":
+					{
+						"buffer_size": 4623,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2171,
+								2171
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 768.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "public/javascripts/tools.js",
+					"settings":
+					{
+						"buffer_size": 1760,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1730,
+								1741
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 328.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "routes/defCar.js",
+					"settings":
+					{
+						"buffer_size": 245,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								187,
+								187
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "routes/car.js",
+					"settings":
+					{
+						"buffer_size": 3148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								873,
+								807
 							]
 						],
 						"settings":
@@ -856,7 +1468,112 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 28.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "routes/index.js",
+					"settings":
+					{
+						"buffer_size": 13186,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								486,
+								486
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "routes/checkMemory.js",
+					"settings":
+					{
+						"buffer_size": 2220,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								153,
+								153
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 449.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "routes/authorize.js",
+					"settings":
+					{
+						"buffer_size": 182,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								58,
+								66
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "routes/user.js",
+					"settings":
+					{
+						"buffer_size": 4217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3686,
+								3686
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2113.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -906,20 +1623,44 @@
 		"selected_items":
 		[
 			[
+				"in",
+				"/Users/ssor/Documents/program/nodejs/webgis/routes/index.js"
+			],
+			[
 				"",
-				"/Users/ssor/Documents/program/nodejs/carbinetShow/test/test.js"
+				"/Users/ssor/Documents/program/nodejs/webgis/routes/user.js"
+			],
+			[
+				"ch",
+				"/Users/ssor/Documents/program/nodejs/webgis/views/changepwd.ejs"
+			],
+			[
+				"us",
+				"/Users/ssor/Documents/program/nodejs/webgis/routes/user.js"
+			],
+			[
+				"de",
+				"/Users/ssor/Documents/program/nodejs/webgis/routes/defCar.js"
+			],
+			[
+				"ca",
+				"/Users/ssor/Documents/program/nodejs/webgis/routes/car.js"
+			],
+			[
+				"a",
+				"/Users/ssor/Documents/program/nodejs/webgis/app.js"
+			],
+			[
+				"usei",
+				"/Users/ssor/Desktop/webgis/Tpl/UserManagement/UserIndex.html"
+			],
+			[
+				"u",
+				"/Users/ssor/Documents/program/nodejs/webgis/routes/user.js"
 			],
 			[
 				"he",
 				"/Users/ssor/Documents/program/nodejs/microblog/views/head.ejs"
-			],
-			[
-				"in",
-				"/Users/ssor/Documents/program/nodejs/microblog/routes/index.js"
-			],
-			[
-				"us",
-				"/Users/ssor/Documents/program/nodejs/microblog/node_modules/user.js"
 			],
 			[
 				"h",

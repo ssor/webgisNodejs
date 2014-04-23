@@ -4,20 +4,10 @@
     <title>选择车辆</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <link href="/stylesheets/index-theme.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="/easyUI/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/easyUI/themes/metro/easyui.css">
     <link rel="stylesheet" type="text/css" href="/easyUI/themes/icon.css">
     <style type="text/css">
-        .demo-info {
-            background: #FFFEE6;
-            color: #8F5700;
-            padding: 12px;
-        }
-        .demo-tip {
-            width: 16px;
-            height: 16px;
-            margin-right: 8px;
-            float: left;
-        }
+
     </style>
     <script src="/javascripts/jquery.min.js" type="text/javascript"></script> 
     <script type="text/javascript" src="/easyUI/jquery.easyui.min.js"></script>
@@ -25,7 +15,7 @@
     <script src="/javascripts/tools.js" type="text/javascript"></script>  
 </head>
 <body>
-    <h2>选择车辆</h2>
+    <h2 class="main_page_title">车辆监控</h2>
     <div class="demo-info">
         <div class="demo-tip icon-tip"></div>
         <div>选择您要监控的车辆</div>
@@ -82,12 +72,16 @@
                         }
                     },
 
-                    {field:'note',title:'备注',width:80,align:'center',
+                    {field:'bagageBinded',title:'运输状态',width:80,align:'center',
                         editor:{
                             type:'text',
                             options:{
                                 required:true
                             }
+                        },
+                        formatter:function(value){
+                            if(value == true) return '运输中';
+                            return '空闲中';
                         }
                     }
                 ]]

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>车辆列表</title>
+    <title>单号列表</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <link href="/stylesheets/index-theme.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="/easyUI/themes/metro/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/easyUI/themes/bootstrap/easyui.css">
     <link rel="stylesheet" type="text/css" href="/easyUI/themes/icon.css">
     <style type="text/css">
-
 
     </style>
     <script src="/javascripts/jquery.min.js" type="text/javascript"></script> 
@@ -16,18 +15,18 @@
     <script src="/javascripts/tools.js" type="text/javascript"></script>  
 </head>
 <body>
-    <h2 class="main_page_title">车辆管理</h2>
+    <h2 class="main_page_title">单号查询</h2>
     <div class="demo-info">
         <div class="demo-tip icon-tip"></div>
-        <div>增加和删除运输的车辆</div>
+        <div>查询运输中包裹的状态</div>
     </div>
     <div style="margin:10px 0;"></div>
     
 
     <div id="tb">
+        <a href="#" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="startMnt()">地图监控</a>
         <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="refresh_grid()">刷新</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="insert()">增加</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deleteRows()">删除</a>
+        <!-- <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deleteRows()">删除</a> -->
         <!-- <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="test()">测试</a>         -->
     </div>
     <table id = "grid1"></table>
@@ -35,7 +34,6 @@
     <script type="text/javascript">
     var toolbar = $('#tb');
     var grid1 = $('#grid1');
-    var carTypes = <%- _carTypes %>;
 
     $(function(){
             $('#grid1').datagrid({
@@ -45,11 +43,11 @@
                 height:'auto',
                 fitColumns:true,
                 singleSelect:true,
-                idField:'userID',
+                idField:'bagageID',
                 toolbar: '#tb',
-                url:'/carList',
+                url:'/bagageList',
                 columns:[[
-                    {field:'carID',title:'车牌号',width:60,align:'center',
+                    {field:'bagageID',title:'单号',width:100,align:'center',
                         editor:{
                             type:'text',
                             options:{
@@ -58,26 +56,16 @@
                         }
                     },
 
-                    {field:'carType',title:'车辆类型',width:80,align:'center',
+                    {field:'carID',title:'所在车辆',width:80,align:'center',
                         editor:{
                             type:'combobox',
                             options:{
-                                valueField:'typeCode',
-                                textField:'typeName',
-                                url:"/carTypeList",
-                                editable:true,
                                 required:true
                             }
-                        },
-                        formatter:function(value){
-                            for(var i=0; i<carTypes.length; i++){
-                                if (carTypes[i].typeCode == value) return carTypes[i].typeName;
-                            }
-                            return '未知';
                         }
                     },
 
-                    {field:'timeStamp',title:'加入时间',width:80,align:'center',
+                    {field:'timeStamp',title:'开始时间',width:80,align:'center',
                         editor:{
                             // type:'text',
                             options:{
@@ -93,27 +81,8 @@
                                 required:true
                             }
                         }
-                    },
-
-                    // {field:'resource_note',title:'说明',width:180,editor:'text'},
-                    {field:'action',title:'',width:50,align:'center',
-                        formatter:function(value,row,index){
-                            if (row.editing){
-                                var s = '<a href="#" onclick="saverow(this)">保存</a> ';
-                                var c = '<a href="#" onclick="cancelrow(this)">取消</a>';
-                                return s+c;
-                            } else {
-                                var e = '<a href="#" onclick="editrow(this)">编辑</a> ';
-                                return e;
-                            }
-                        }
                     }
                 ]],
-                // rowStyler: function(index,row){
-                //     if ((index % 2) != 0){
-                //         return 'background-color:#f3f3f3;color:#000;';
-                //     }
-                // },
 
                 onBeforeEdit:function(index,row){
                     row.editing = true;
@@ -129,7 +98,13 @@
                 }
             });
         });
-
+    function startMnt(){
+        var rows = grid1.datagrid('getSelections');
+        if(rows.length > 0){
+            window.location.href = "/startBagageMnting/"+ rows[0].bagageID;
+            return;             
+        }   
+    }   
     function updateActions(index){
         grid1.datagrid('updateRow',{
             index: index,
@@ -144,8 +119,7 @@
         grid1.datagrid('beginEdit', getRowIndex(target));
     }
 
-    function saverow(target)
-    {
+    function saverow(target){
         var index = getRowIndex(target);
         grid1.datagrid('endEdit', index);
         var rows = grid1.datagrid('getRows');
@@ -210,8 +184,7 @@
         grid1.datagrid('selectRow',index);
         grid1.datagrid('beginEdit',index);
     }
-    function deleteRows()
-    {
+    function deleteRows(){
         $.messager.confirm('确认','删除该信息将无法恢复，确定删除吗？',function(r){
             if (r){
                 var rows = grid1.datagrid('getSelections');

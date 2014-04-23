@@ -1,5 +1,4 @@
 var Datastore  = require('nedb');
-var userdb      = new Datastore({ filename: 'user.db', autoload: true });
 var _          = require('underscore');
 var EventProxy = require('eventproxy');
 var async = require('async');
@@ -23,26 +22,6 @@ exports.validateUser = function(_id, _pwd){
 		ep.emit('validateUser', true);
 	});
 	return;
-	async.waterfall([
-	    function(cb){ 
-			userdb.findOne({userID: _id, password: _pwd}, function(err, _user){
-				if(err) {
-					cb(err, null);
-				}
-				if(_user == null) {
-					console.log(('no user named ' + _id).warn);
-					cb(null, false);
-				}
-				cb(null, true);
-			});
-		 }
-	], function (err, result) {
-		if(err != null){
-		    log('err: '.error, err);
-		    return false;
-		}
-		return result;
-	});	
 }
 
 exports.index = function(req, res){
@@ -143,6 +122,9 @@ exports.addUser = function(req, res){
 	});
 };
 exports.list = function(req, res){
+	if(req.session.username == null){
+		res.send(''); return;
+	}	
 	userdb.find({}, function(err, users){
 		console.dir(users);
 		res.send(JSON.stringify(users));

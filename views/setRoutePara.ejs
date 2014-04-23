@@ -7,22 +7,12 @@
 
 <link href="/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">    
     <link href="/stylesheets/index-theme.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="/easyUI/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/easyUI/themes/metro/easyui.css">
     <link rel="stylesheet" type="text/css" href="/easyUI/themes/icon.css">
     <style type="text/css">
-        .demo-info {
-            background: #FFFEE6;
-            color: #8F5700;
-            padding: 12px;
-        }
-        .demo-tip {
-            width: 16px;
-            height: 16px;
-            margin-right: 8px;
-            float: left;
-        }
         .control-label{
-            margin-left: -15px; margin-right: -20px; color: gray; font-size: 15px;
+            margin-left: -15px; margin-right: -20px; font-size: 15px;
+            
         }
     </style>
 <script type="text/javascript" language="javascript" src="/javascripts/jquery.js"></script>
@@ -53,6 +43,10 @@
 	 });
 	 function setPara(){
         var carID = $("#selectCars").val();
+        if(carID == null){
+            alert('必须先选择一辆车！');
+            return; 
+        }
         var dateStart = $('#dateStart')[0].value;
 	 	var dateEnd = $('#dateEnd')[0].value;
         if(dateStart >= dateEnd){
@@ -78,7 +72,7 @@
 </script>
 </head>
 <body>
-    <h4 style="font-size: 20px; margin-top: 15px; margin-bottom: 15px;">选择路径</h4>
+    <h4  class="main_page_title">路径回放</h4>
     <div class="demo-info" style="margin-bottom:25px;">
         <div class="demo-tip icon-tip"></div>
         <div>选择您要回放车辆的编号和时间段</div>
@@ -88,27 +82,27 @@
 	<div class="container" id="tile_container" style="margin-bottom:80px;margin-left:0px; padding-left:0px;">
 		<form class="form-horizontal" role="form">
 		  <div class="form-group">
-            <label for="inputPassword3" class="col-xs-2 col-sm-2 col-md-2 control-label" style="">选择车辆</label>
-		    <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4">
-    		    <select class="form-control" id="selectCars">
+            <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4">
+                <select class="form-control" id="selectCars">
                 </select>
-		    </div>
+            </div>
+            <label class="col-xs-2 col-sm-2 col-md-2 control-label" style="text-align: left; font-weight: 100; color: rgb(180,180,180); padding-top: 12px;">选择车辆</label>
 		  </div>
 		  <div class="form-group">
-            <label for="inputPassword3" class="col-xs-2 col-sm-2 control-label" style="">开始时间点</label>
-		    <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4">
-		      <input type="date" class="form-control" id="dateStart" placeholder="">
-		    </div>
+            <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4">
+              <input type="date" class="form-control" id="dateStart" placeholder="">
+            </div>
+            <label for="inputPassword3" class="col-xs-2 col-sm-2 control-label" style="text-align: left; font-weight: 100; color: rgb(180,180,180); padding-top: 12px;">开始时间点</label>
 		  </div>
 		  <div class="form-group">
-            <label for="inputPassword3" class="col-xs-2 col-sm-2 control-label" style="">结束时间点</label>
-		    <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4">
-		      <input type="date" class="form-control" id="dateEnd" placeholder="">
-		    </div>
+            <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4">
+              <input type="date" class="form-control" id="dateEnd" placeholder="">
+            </div>
+            <label for="inputPassword3" class="col-xs-2 col-sm-2 control-label" style="text-align: left; font-weight: 100; color: rgb(180,180,180); padding-top: 12px;">结束时间点</label>
 		  </div>		  
 		</form>	
 	    <div class="col-xs-10 col-sm-8 col-md-2 col-lg-2" style="padding-left: 0px; padding-right: 5px;margin-top: 10px;">
-			<button type="button" class="btn btn-primary btn-lg btn-block" onclick="setPara()" style="margin-left:90px;">确定</button>
+			<button type="button" class="btn btn-primary btn-lg btn-block" onclick="setPara()" style="">确定</button>
 	    </div>
 	</div>
 

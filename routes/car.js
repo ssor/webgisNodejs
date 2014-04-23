@@ -1,10 +1,8 @@
-var Datastore  = require('nedb');
-var cardb      = new Datastore({ filename: 'car.db', autoload: true });
 var _          = require('underscore');
 var EventProxy = require('eventproxy');
 var Car = require('./defCar');
 
-var localEP = new EventProxy();
+// var localEP = new EventProxy();
 
 exports.index = function(req, res){
 	res.render('carIndex', {_carTypes: JSON.stringify(getCarTypeList())});
@@ -62,10 +60,22 @@ exports.carList = function(req, res){
 		console.log('no login yet'.error);
 		res.send('');return;
 	}
-	localEP.once('getCarListOver', function(_list){
-		res.send(JSON.stringify(_list));
-	});
+	var localEP = new EventProxy();
 	getCarListOfSpecifiedUser(req.session.username, localEP);
+	getCarBagageMap(localEP);
+
+	localEP.all('getCarListOver', 'getCarBagageMapOver', function(_carlist, _mapList){
+		var carsInfoReturn = _.map(_carlist, function(_car){
+			var bagageList = _.findWhere(_mapList, {carID: _car.carID});
+			var bagageBinded = (_.size(bagageList) > 0);
+			return {carID: _car.carID, carType: _car.carType, note: _car.note, timeStamp: _car.timeStamp, bagageBinded: bagageBinded};
+		});
+		console.dir(carsInfoReturn);
+		res.send(JSON.stringify(carsInfoReturn));
+	})
+	localEP.fail(function(err){
+		res.send('');
+	});
 	// var selector = {owner: req.session.username};
 	// if(req.session.username == 'admin'){
 	// 	selector = {};
@@ -87,21 +97,24 @@ exports.carTypeList = function(req, res){
 exports.getCarTypeList = getCarTypeList;
 exports.getCarListOfSpecifiedUser = getCarListOfSpecifiedUser;
 //****************************************************
-
+function getCarBagageMap(_ep){
+	bagagedb.find({}, _ep.doneLater('getCarBagageMapOver'));
+};
 function getCarListOfSpecifiedUser(_user, _ep){
 	var selector = {owner: _user};
 	if(_user == 'admin'){
 		selector = {};
 	}
-	cardb.find(selector, function(err, _cars){
-		if(err){
-			_ep.emit('getCarListOver', []);			
-		}
-		var cars = _.map(_cars, function(_car){
-			return {carID: _car.carID, carType: _car.carType, note: _car.note, timeStamp: _car.timeStamp};
-		});
-		_ep.emit('getCarListOver', cars);			
-	});
+	cardb.find(selector, _ep.doneLater('getCarListOver'));
+	// cardb.find(selector, function(err, _cars){
+	// 	if(err){
+	// 		_ep.emitLater('getCarListOver', []);			
+	// 	}
+	// 	var cars = _.map(_cars, function(_car){
+	// 		return {carID: _car.carID, carType: _car.carType, note: _car.note, timeStamp: _car.timeStamp};
+	// 	});
+	// 	_ep.emitLater('getCarListOver', cars);			
+	// });
 }
 function getCarTypeList(){
 	var list = [];
