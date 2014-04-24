@@ -1,7 +1,7 @@
 
 carPointDBList = [];
 globalEP = null;
-LATEST_POINT_INTERVAL = 15;//计算默认最近上传点时候的最大时间间隔，超过这个时间认为最近没有上传位置数据
+LATEST_POINT_INTERVAL = 15;//day 计算默认最近上传点时候的最大时间间隔，超过这个时间认为最近没有上传位置数据
 MIN_INTERVAL_FOR_REFRESH_CAR_POSITION_MAP = 15;//second
 latestCarPointList = [];
 

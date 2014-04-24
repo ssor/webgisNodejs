@@ -49,7 +49,7 @@ exports.getBagageStatus = function(req, res){
 			res.send('');
 			return;
 		}
-		console.dir(latestCarPointList);
+		// console.dir(latestCarPointList);
 		var latestPoint = _.findWhere(latestCarPointList, {carID: _carID});
 		if(latestPoint == null){
 			console.log('no point for ' + _carID);
