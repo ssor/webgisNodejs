@@ -4,6 +4,94 @@
 		"selected_items":
 		[
 			[
+				"la",
+				"latestPoint"
+			],
+			[
+				"er",
+				"error"
+			],
+			[
+				"tim",
+				"timeFormater"
+			],
+			[
+				"do",
+				"downloadMap"
+			],
+			[
+				"get",
+				"getTime"
+			],
+			[
+				"dow",
+				"downloadTimeStamp"
+			],
+			[
+				"poi",
+				"point"
+			],
+			[
+				"em",
+				"emit"
+			],
+			[
+				"ima",
+				"imageName"
+			],
+			[
+				"ba",
+				"bagageID"
+			],
+			[
+				"badb",
+				"bagagedb"
+			],
+			[
+				"ev",
+				"eventRemoveBagage"
+			],
+			[
+				"ins",
+				"insertBagageCarBindingRecord2DB"
+			],
+			[
+				"getCid",
+				"getBindedCarIDOver"
+			],
+			[
+				"getb",
+				"getBindedCarID"
+			],
+			[
+				"str",
+				"startMnting"
+			],
+			[
+				"st",
+				"startBagageMnting"
+			],
+			[
+				"sta",
+				"startMnting"
+			],
+			[
+				"new",
+				"newBagage"
+			],
+			[
+				"dat",
+				"dateStart"
+			],
+			[
+				"ca",
+				"carID"
+			],
+			[
+				"getCar",
+				"getCarBagageMap"
+			],
+			[
 				"che",
 				"checkChangeTrend"
 			],
@@ -44,14 +132,6 @@
 				"carID"
 			],
 			[
-				"dat",
-				"dateEnd"
-			],
-			[
-				"ca",
-				"cars"
-			],
-			[
 				"sel",
 				"selectCars"
 			],
@@ -62,22 +142,6 @@
 			[
 				"_p",
 				"_point"
-			],
-			[
-				"get",
-				"getPointListFromDBOver"
-			],
-			[
-				"er",
-				"err"
-			],
-			[
-				"la",
-				"latestPoint"
-			],
-			[
-				"ins",
-				"insertCarPoint"
 			],
 			[
 				"db",
@@ -142,10 +206,6 @@
 			[
 				"nu",
 				"numberReplaced"
-			],
-			[
-				"do",
-				"documentHeight"
 			],
 			[
 				"fo",
@@ -272,10 +332,6 @@
 				"inventoryUnit"
 			],
 			[
-				"em",
-				"emitTagEvent"
-			],
-			[
 				"pro",
 				"prototype"
 			],
@@ -294,14 +350,6 @@
 			[
 				"pr",
 				"privateEp"
-			],
-			[
-				"ev",
-				"eventID"
-			],
-			[
-				"new",
-				"newRecord"
 			],
 			[
 				"tag",
@@ -360,16 +408,8 @@
 				"array2"
 			],
 			[
-				"tim",
-				"timeStamp"
-			],
-			[
 				"ad",
 				"addRecord"
-			],
-			[
-				"str",
-				"strSrc"
 			],
 			[
 				"JS",
@@ -456,20 +496,12 @@
 				"image"
 			],
 			[
-				"ima",
-				"imageMap"
-			],
-			[
 				"_ty",
 				"_typeInfo"
 			],
 			[
 				"_e",
 				"_epcResponse"
-			],
-			[
-				"st",
-				"statusCode"
 			],
 			[
 				"grou",
@@ -482,48 +514,25 @@
 			[
 				"upd",
 				"updateColumnChart"
-			],
-			[
-				"co",
-				"colors"
-			],
-			[
-				"tit",
-				"titleInfo"
-			],
-			[
-				"ti",
-				"title"
-			],
-			[
-				"cr",
-				"createWebSocket"
-			],
-			[
-				"remo",
-				"removeItemByEPC"
-			],
-			[
-				"ite",
-				"itemType"
-			],
-			[
-				"fon",
-				"font-size"
-			],
-			[
-				"ba",
-				"background-color"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
+			"file": "routes/api.js",
+			"settings":
+			{
+				"buffer_size": 542,
+				"line_ending": "Unix",
+				"name": "// api"
+			}
+		},
+		{
 			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 2533,
+				"buffer_size": 3634,
 				"line_ending": "Unix"
 			}
 		},
@@ -552,18 +561,26 @@
 			}
 		},
 		{
-			"file": "views/left.ejs",
+			"file": "views/chooseCarToMnt.ejs",
 			"settings":
 			{
-				"buffer_size": 5146,
+				"buffer_size": 3837,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "views/chooseCarToMnt.ejs",
+			"file": "views/left.ejs",
 			"settings":
 			{
-				"buffer_size": 3880,
+				"buffer_size": 2320,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/stylesheets/index-theme.css",
+			"settings":
+			{
+				"buffer_size": 1456,
 				"line_ending": "Unix"
 			}
 		},
@@ -571,7 +588,7 @@
 			"file": "views/carIndex.ejs",
 			"settings":
 			{
-				"buffer_size": 9412,
+				"buffer_size": 9179,
 				"line_ending": "Unix"
 			}
 		},
@@ -579,7 +596,7 @@
 			"file": "views/right.ejs",
 			"settings":
 			{
-				"buffer_size": 3028,
+				"buffer_size": 3077,
 				"line_ending": "Unix"
 			}
 		},
@@ -587,7 +604,7 @@
 			"file": "views/startMnting.ejs",
 			"settings":
 			{
-				"buffer_size": 5709,
+				"buffer_size": 5954,
 				"line_ending": "Unix"
 			}
 		},
@@ -595,7 +612,7 @@
 			"file": "views/userIndex.ejs",
 			"settings":
 			{
-				"buffer_size": 8640,
+				"buffer_size": 8406,
 				"line_ending": "Unix"
 			}
 		},
@@ -603,7 +620,7 @@
 			"file": "views/changepwd.ejs",
 			"settings":
 			{
-				"buffer_size": 3585,
+				"buffer_size": 3287,
 				"line_ending": "Unix"
 			}
 		},
@@ -616,22 +633,6 @@
 			}
 		},
 		{
-			"file": "views/uploadgps.ejs",
-			"settings":
-			{
-				"buffer_size": 7985,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "routes/mobile.js",
-			"settings":
-			{
-				"buffer_size": 5508,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "views/startReplaying.ejs",
 			"settings":
 			{
@@ -640,10 +641,50 @@
 			}
 		},
 		{
+			"file": "views/bagageIndex.ejs",
+			"settings":
+			{
+				"buffer_size": 7931,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/uploadgps.ejs",
+			"settings":
+			{
+				"buffer_size": 8533,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/bagageStatusIndex.ejs",
+			"settings":
+			{
+				"buffer_size": 3384,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/bagageLoginIndex.ejs",
+			"settings":
+			{
+				"buffer_size": 2915,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/startBagageMnting.ejs",
+			"settings":
+			{
+				"buffer_size": 5999,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "views/setRoutePara.ejs",
 			"settings":
 			{
-				"buffer_size": 4623,
+				"buffer_size": 4579,
 				"line_ending": "Unix"
 			}
 		},
@@ -652,6 +693,14 @@
 			"settings":
 			{
 				"buffer_size": 1760,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/mobile.js",
+			"settings":
+			{
+				"buffer_size": 7527,
 				"line_ending": "Unix"
 			}
 		},
@@ -667,7 +716,15 @@
 			"file": "routes/car.js",
 			"settings":
 			{
-				"buffer_size": 3148,
+				"buffer_size": 3713,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/bagage.js",
+			"settings":
+			{
+				"buffer_size": 6544,
 				"line_ending": "Unix"
 			}
 		},
@@ -675,16 +732,17 @@
 			"file": "routes/index.js",
 			"settings":
 			{
-				"buffer_size": 13186,
+				"buffer_size": 13648,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "routes/checkMemory.js",
+			"file": "routes/saveCarPosImg.js",
 			"settings":
 			{
-				"buffer_size": 2220,
-				"line_ending": "Unix"
+				"buffer_size": 4567,
+				"line_ending": "Unix",
+				"name": "var http = require(\"http\");"
 			}
 		},
 		{
@@ -699,7 +757,15 @@
 			"file": "routes/user.js",
 			"settings":
 			{
-				"buffer_size": 4217,
+				"buffer_size": 3734,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/checkMemory.js",
+			"settings":
+			{
+				"buffer_size": 2220,
 				"line_ending": "Unix"
 			}
 		}
@@ -728,6 +794,8 @@
 	},
 	"file_history":
 	[
+		"/Users/ssor/Documents/program/nodejs/webgis/routes/timeFormat.js",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/left.ejs",
 		"/Users/ssor/Documents/program/nodejs/webgis/public/javascripts/timeFormat.js",
 		"/Users/ssor/Documents/program/nodejs/webgis/views/mobileIndex2.ejs",
 		"/Users/ssor/Documents/program/nodejs/webgis/views/uploadgps2.ejs",
@@ -794,7 +862,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -808,6 +876,50 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"initialCarPointDB",
+			"para",
+			"downloadMapWaitList",
+			"DownloadMapWaitList",
+			"downloadMapWaitList",
+			"120",
+			"6",
+			"12",
+			"_bagage",
+			"username",
+			"sogouPoint",
+			"initiallatestCarPointList",
+			"latestCarPointList",
+			"right",
+			"180",
+			"_newBagage",
+			"cardb",
+			"insertBagageCarBinding2DB",
+			"removeBagageCarBindingFromDB",
+			"startMnt",
+			"emit",
+			"initialCarPointDB",
+			"initiallatestCarPointList",
+			"insertBagageCarBinding2DB",
+			"timeStamp",
+			"240",
+			"230",
+			"250",
+			"243",
+			"240",
+			"container",
+			"latestCarPointList",
+			"initiallatestCarPointList",
+			"EP",
+			"ep",
+			"EP",
+			"eP",
+			"EP",
+			"eP",
+			"ep",
+			"insertCarPoint",
+			"getPointListFromDB",
+			"localEP",
+			"_list",
 			"memmoryMin",
 			"memoryLasted",
 			"planetdb",
@@ -891,51 +1003,7 @@
 			"antennaID",
 			"antennaIDFloorMap",
 			"antenaIDScrope",
-			"antennaID",
-			"InventoryLogic",
-			"inventoryReaderPortList",
-			"wsServerInventory",
-			"inventoryReaderPortList",
-			"typeInfoList",
-			"InventoryLogic",
-			"websocket",
-			"WebSocket",
-			"websocket",
-			"processLog",
-			"debugOutput",
-			"init2",
-			"init",
-			"setTagExistState",
-			"triggerTagEvent",
-			"typeInfoList",
-			"currentCount",
-			"broadcastInventory",
-			"initialCount",
-			"_inventory",
-			"inventoryReaderPortList",
-			"inventoryReaderNameList",
-			"inventoryReaderPortList",
-			"ep",
-			"requestListTypeInfo_handler",
-			"requestListTypeInfo",
-			"_listTypeMapList",
-			"typeInfoList",
-			"listTypeMapList",
-			"_epcTypeMapList",
-			"console",
-			"udpServer",
-			"getSubscribedExistTags",
-			"_tag",
-			"getSubscribedExistTags",
-			"tagList",
-			"broadcastInfo",
-			"wsServer",
-			"debug",
-			"checkTagChanges",
-			"inventoryUnit",
-			"getCurrentExistsTagList",
-			"minTagReadedConfirmCount",
-			"checkTagExist"
+			"antennaID"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -953,39 +1021,67 @@
 	"groups":
 	[
 		{
-			"selected": 20,
+			"selected": 27,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app.js",
+					"file": "routes/api.js",
 					"settings":
 					{
-						"buffer_size": 2533,
+						"buffer_size": 542,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								674,
-								674
+								537,
+								537
 							]
 						],
 						"settings":
 						{
+							"auto_name": "// api",
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 124.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "app.js",
+					"settings":
+					{
+						"buffer_size": 3634,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								110,
+								151
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "views/index.ejs",
 					"settings":
 					{
@@ -996,8 +1092,8 @@
 						"selection":
 						[
 							[
-								2421,
-								2421
+								297,
+								297
 							]
 						],
 						"settings":
@@ -1006,13 +1102,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 717.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "views/main.ejs",
 					"settings":
 					{
@@ -1038,7 +1134,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "views/top.ejs",
 					"settings":
 					{
@@ -1065,45 +1161,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "views/left.ejs",
-					"settings":
-					{
-						"buffer_size": 5146,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4176,
-								4176
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2812.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 5,
 					"file": "views/chooseCarToMnt.ejs",
 					"settings":
 					{
-						"buffer_size": 3880,
+						"buffer_size": 3837,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3739,
-								3739
+								1019,
+								1025
 							]
 						],
 						"settings":
@@ -1113,53 +1183,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1046.0,
+						"translation.y": 126.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "views/carIndex.ejs",
+					"file": "views/left.ejs",
 					"settings":
 					{
-						"buffer_size": 9412,
+						"buffer_size": 2320,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								686,
-								697
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 187.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "views/right.ejs",
-					"settings":
-					{
-						"buffer_size": 3028,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1114,
-								1114
+								678,
+								678
 							]
 						],
 						"settings":
@@ -1168,25 +1210,81 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1127.0,
+						"translation.y": 6.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "views/startMnting.ejs",
+					"buffer": 7,
+					"file": "public/stylesheets/index-theme.css",
 					"settings":
 					{
-						"buffer_size": 5709,
+						"buffer_size": 1456,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								767,
-								772
+								106,
+								106
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "views/carIndex.ejs",
+					"settings":
+					{
+						"buffer_size": 9179,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								396,
+								396
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 39.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "views/right.ejs",
+					"settings":
+					{
+						"buffer_size": 3077,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2995,
+								2995
 							]
 						],
 						"settings":
@@ -1201,47 +1299,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "views/userIndex.ejs",
-					"settings":
-					{
-						"buffer_size": 8640,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								145,
-								156
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 9.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 10,
-					"file": "views/changepwd.ejs",
+					"file": "views/startMnting.ejs",
 					"settings":
 					{
-						"buffer_size": 3585,
+						"buffer_size": 5954,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2029,
-								2029
+								684,
+								684
 							]
 						],
 						"settings":
@@ -1257,6 +1327,62 @@
 				},
 				{
 					"buffer": 11,
+					"file": "views/userIndex.ejs",
+					"settings":
+					{
+						"buffer_size": 8406,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								841,
+								864
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 17.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "views/changepwd.ejs",
+					"settings":
+					{
+						"buffer_size": 3287,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2053,
+								2053
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 648.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
 					"file": "views/mobileIndex.ejs",
 					"settings":
 					{
@@ -1267,68 +1393,13 @@
 						"selection":
 						[
 							[
-								4517,
-								4661
+								554,
+								570
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1892.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "views/uploadgps.ejs",
-					"settings":
-					{
-						"buffer_size": 7985,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7661,
-								7661
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "routes/mobile.js",
-					"settings":
-					{
-						"buffer_size": 5508,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4646,
-								4646
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -1349,8 +1420,8 @@
 						"selection":
 						[
 							[
-								5531,
-								5531
+								3132,
+								3146
 							]
 						],
 						"settings":
@@ -1359,25 +1430,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3127.0,
+						"translation.y": 1665.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 15,
-					"file": "views/setRoutePara.ejs",
+					"file": "views/bagageIndex.ejs",
 					"settings":
 					{
-						"buffer_size": 4623,
+						"buffer_size": 7931,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2171,
-								2171
+								1036,
+								1036
 							]
 						],
 						"settings":
@@ -1387,13 +1458,150 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 768.0,
+						"translation.y": 725.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 16,
+					"file": "views/uploadgps.ejs",
+					"settings":
+					{
+						"buffer_size": 8533,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5226,
+								5226
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2130.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "views/bagageStatusIndex.ejs",
+					"settings":
+					{
+						"buffer_size": 3384,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1498,
+								1498
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "views/bagageLoginIndex.ejs",
+					"settings":
+					{
+						"buffer_size": 2915,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								363,
+								363
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "views/startBagageMnting.ejs",
+					"settings":
+					{
+						"buffer_size": 5999,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1575,
+								1575
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 273.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "views/setRoutePara.ejs",
+					"settings":
+					{
+						"buffer_size": 4579,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3682,
+								3682
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 440.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 21,
 					"file": "public/javascripts/tools.js",
 					"settings":
 					{
@@ -1415,13 +1623,40 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 328.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 22,
+					"file": "routes/mobile.js",
+					"settings":
+					{
+						"buffer_size": 7527,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2605,
+								2612
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 888.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 23,
 					"file": "routes/defCar.js",
 					"settings":
 					{
@@ -1447,19 +1682,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 24,
 					"file": "routes/car.js",
 					"settings":
 					{
-						"buffer_size": 3148,
+						"buffer_size": 3713,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								873,
-								807
+								658,
+								658
 							]
 						],
 						"settings":
@@ -1474,19 +1709,46 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 25,
+					"file": "routes/bagage.js",
+					"settings":
+					{
+						"buffer_size": 6544,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1562,
+								1562
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 26,
 					"file": "routes/index.js",
 					"settings":
 					{
-						"buffer_size": 13186,
+						"buffer_size": 13648,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								486,
-								486
+								423,
+								423
 							]
 						],
 						"settings":
@@ -1494,40 +1756,43 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
+						"translation.x": 10.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 20,
-					"file": "routes/checkMemory.js",
+					"buffer": 27,
+					"file": "routes/saveCarPosImg.js",
 					"settings":
 					{
-						"buffer_size": 2220,
+						"buffer_size": 4567,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								153,
-								153
+								777,
+								777
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"auto_name": "var http = require(\"http\");",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 449.0,
+						"translation.x": 1.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 28,
 					"file": "routes/authorize.js",
 					"settings":
 					{
@@ -1553,27 +1818,55 @@
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 29,
 					"file": "routes/user.js",
 					"settings":
 					{
-						"buffer_size": 4217,
+						"buffer_size": 3734,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3686,
-								3686
+								34,
+								34
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2113.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 30,
+					"file": "routes/checkMemory.js",
+					"settings":
+					{
+						"buffer_size": 2220,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								876,
+								876
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 1.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
