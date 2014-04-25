@@ -27,6 +27,7 @@
     <div id="tb">
         <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="refresh_grid()">刷新</a>
         <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="insert()">增加</a>
+        <!-- <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="resetpwd()">重置密码</a> -->
         <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deleteRows()">删除</a>
         <!-- <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="test()">测试</a>         -->
     </div>
@@ -225,6 +226,40 @@
             }
         });     
     }   
+    function resetpwd(){
+        $.messager.confirm('确认','删除该信息将无法恢复，确定删除吗？',function(r){
+            if (r){
+                var rows = grid1.datagrid('getSelections');
+                if(rows.length > 0){
+                    var json = {userID: rows[0].userID};
+                    $.ajax({
+                        url: "/deleteUser",
+                        // contentType: "text/plain",
+                        // data: JSON.stringify(json),
+                        data: json,
+                        type: "post",
+                        success: function (text) {
+                            if(text == "ok")
+                            {
+                                $.messager.alert('提示','操作成功！','info');
+                            }
+                            else
+                            {
+                                $.messager.alert('提示','操作出现异常！','info');
+                            }
+                            refresh_grid();
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            alert(jqXHR.responseText);
+                            refresh_grid();
+                        }
+                    });                
+                    refresh_grid();                    
+                }
+
+            }
+        });           
+    }
     </script>
     <div class="description">
         <h3>说明</h3>

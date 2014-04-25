@@ -45,7 +45,7 @@ exports.checkLogin = function(req, res){
 		req.session.nickname = "管理员";
 		res.send('ok');
 	}else{
-		ep.once('validateUser', function(_result){
+		globalEP.once('validateUser', function(_result){
 			if(_result){
 				req.session.nickname = "普通用户";
 				res.send('ok');
@@ -54,13 +54,8 @@ exports.checkLogin = function(req, res){
 				res.send('error');
 			}
 		});
-		userModule.validateUser(user, pwd);
+		userModule.validateUser(user, pwd, globalEP);
 	} 
-	// if(userModule.validateUser(user, pwd)){
-	// }
-	// else{
-	// }
-	// return;
 };
 exports.right = function(req, res){
 	res.render('right');

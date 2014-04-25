@@ -8,18 +8,18 @@ var authorize = require('./authorize');
  * GET users listing.
  */
 
-exports.validateUser = function(_id, _pwd){
+exports.validateUser = function(_id, _pwd, _ep){
 	console.log('validateUser => ' + _id + '  ' + _pwd);
 	userdb.findOne({userID: _id, password: _pwd}, function(err, _user){
 		if(err) {
 			console.log('validateUser db error'.error)
-			ep.emit('validateUser', false);
+			_ep.emit('validateUser', false);
 		}
 		if(_user == null) {
 			console.log(('no user named ' + _id).warn);
-			ep.emit('validateUser', false);
+			_ep.emit('validateUser', false);
 		}
-		ep.emit('validateUser', true);
+		_ep.emit('validateUser', true);
 	});
 	return;
 }
