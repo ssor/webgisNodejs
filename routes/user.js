@@ -77,6 +77,22 @@ exports.changePassword = function(req, res){
 
 	res.render('changepwd');
 };
+exports.resetpwd = function(req, res){
+	var user = req.body.userID;
+	if(user == null || user == undefined){
+		console.log('user not selected'.error);
+	    res.send('error');
+	    return;
+	}
+	userdb.update({userID: user}, { $set: { password: "123" } }, function(err, _user){
+		if(err) {
+			console.log('userdb error when update'.error);
+		    res.send('error');
+		    return;
+		}
+		res.send('ok');
+	});		
+}
 exports.deleteUser = function(req, res){
 	var userID = req.body.userID;
 	console.log('deleteUser => ' + userID);

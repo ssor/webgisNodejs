@@ -27,7 +27,7 @@
     <div id="tb">
         <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="refresh_grid()">刷新</a>
         <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="insert()">增加</a>
-        <!-- <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="resetpwd()">重置密码</a> -->
+        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="resetpwd()">重置密码</a>
         <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deleteRows()">删除</a>
         <!-- <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="test()">测试</a>         -->
     </div>
@@ -227,13 +227,13 @@
         });     
     }   
     function resetpwd(){
-        $.messager.confirm('确认','删除该信息将无法恢复，确定删除吗？',function(r){
+        $.messager.confirm('确认','该用户密码将会被重置为默认密码，请尽快修改该密码以保证安全！',function(r){
             if (r){
                 var rows = grid1.datagrid('getSelections');
                 if(rows.length > 0){
                     var json = {userID: rows[0].userID};
                     $.ajax({
-                        url: "/deleteUser",
+                        url: "/resetpwd",
                         // contentType: "text/plain",
                         // data: JSON.stringify(json),
                         data: json,

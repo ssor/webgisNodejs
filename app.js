@@ -81,6 +81,7 @@ app.post('/addUser', user.addUser);
 app.post('/deleteUser', user.deleteUser);
 app.get('/changePassword', user.changePassword);
 app.post('/postNewPassword', user.postNewPassword);
+app.post('/resetpwd', user.resetpwd);
 
 app.post('/carList', car.carList);
 app.get('/carIndex', car.index);
