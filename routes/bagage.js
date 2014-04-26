@@ -67,8 +67,14 @@ exports.index = function(req, res){
 	res.render('bagageIndex');
 };
 exports.bagageList = function(req, res){
+	var owner = req.session.username;
+	if(owner == null){
+		res.send('error');
+		return;
+	}	
+
 	var localEP = new EventProxy();
-	getBagageList(null, localEP);
+	getBagageList(owner, localEP);
 
 	localEP.once('getBagageListOver',function(_bagageList){
 		var bagageList = _.map(_bagageList, function(_bagage){
@@ -81,15 +87,15 @@ exports.bagageList = function(req, res){
 	});	
 }
 exports.addBagageCarBinding = function(req, res){
-	var owner = req.session.username;
-	if(owner == null){
-		res.send('error');
-		return;
-	}	
 	var body = req.body;
 	var id = body.carID;
 	var bagageID = body.bagageID;
 	var note = body.note;
+	var owner = body.token;
+	if(owner == null){
+		res.send('error');
+		return;
+	}	
 	var newBagage = {carID: id, bagageID: bagageID, note: note, timeStamp: timeFormater(), owner: owner};
 	console.log('newBagage => '.info);
 	console.dir(newBagage);
@@ -98,14 +104,14 @@ exports.addBagageCarBinding = function(req, res){
 	return;
 };
 exports.removeBagageCarBinding = function(req, res){
-	var owner = req.session.username;
-	if(owner == null){
-		res.send('error');
-		return;
-	}
 	var body = req.body;
 	var id = body.carID;
 	var bagageID = body.bagageID;	
+	var owner = body.token;
+	if(owner == null){
+		res.send('error');
+		return;
+	}	
 	var removedBagage = {carID: id, bagageID: bagageID, timeStamp: timeFormater(), owner: owner};
 	console.log('removedBagage => '.info);
 	console.dir(removedBagage);
@@ -147,8 +153,8 @@ function insertBagageCarBinding2DB(_bagage){
 		_bagage.res.send('error');
 	});
 
-	bagagedb.find({carID: _bagage.carID, bagageID: _bagage.bagageID}, localEP.doneLater('getBagageWithCarIDAndBagageID'));
-	localEP.once('getBagageWithCarIDAndBagageID', function(_list){
+	bagagedb.find({bagageID: _bagage.bagageID}, localEP.doneLater('getBagageWithBagageID'));
+	localEP.once('getBagageWithBagageID', function(_list){
 		if(_.size(_list) > 0){
 			console.log('this bagage already exits!'.error);
 			_bagage.res.send('duplicated');
@@ -170,7 +176,7 @@ function removeBagageCarBindingFromDB(_bagage){
 		console.log('removeBagageCarBindingFromDB error'.error);
 		_bagage.res.send('error');
 	});
-	bagagedb.remove({carID: _bagage.carID, bagageID: _bagage.bagageID}, localEP.doneLater('removeBagageCarBindingFromDBOver'));
+	bagagedb.remove({carID: _bagage.carID, bagageID: _bagage.bagageID, owner: _bagage.owner}, localEP.doneLater('removeBagageCarBindingFromDBOver'));
 	localEP.once('removeBagageCarBindingFromDBOver', function(_numRemoved){
 		console.log('removeBagageCarBindingFromDB ok !'.data);
 		var record = {carID: _bagage.carID, bagageID: _bagage.bagageID, timeStamp: _bagage.timeStamp, owner: _bagage.owner};
@@ -190,8 +196,13 @@ function insertBagageCarBindingRecord2DB(_newBagageRecord){
 	});
 }
 function getBagageList(_owner, _ep){
-	if(_owner == null) _owner = 'admin';
+	if(_owner == null) {
+		_owner = 'admin'
+	};
 	var selector = {owner: _owner};
+	if(_owner == "admin"){
+		selector = {};
+	}
 	bagagedb.find(selector, _ep.doneLater('getBagageListOver'));
 }
 //******************************************************

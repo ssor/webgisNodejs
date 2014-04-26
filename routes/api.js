@@ -7,7 +7,10 @@ URL:
 header: 
 	Content-Type: application/json; charset=UTF-8
 content example:
-	{"carID":"xcar2", "bagageID": "b001", "note": "n111"}
+	{"carID":"xcar2", "bagageID": "b001", "note": "n111", "token": "demo"}
+参数说明：
+	token:用户识别标识
+
 
 URL:
 	http://localhost:9002/removeBagageCarBinding
@@ -16,7 +19,10 @@ URL:
 header: 
 	Content-Type: application/json; charset=UTF-8
 content example:
-	{"carID":"xcar2", "bagageID": "b001"}
+	{"carID":"xcar2", "bagageID": "b001", "token": "demo"}
+参数说明：
+	token:用户识别标识
+
 
 URL:
 	http://localhost:9002/gerBagageRecord
