@@ -14,6 +14,10 @@ require('./saveCarPosImg');
 globalEP.emitLater('initialCarPointDB');
 // setInterval(checkMemoryModule.checkMemory, 1000);
 
+exports.versionIndex = function(req, res){
+	res.render('version');
+}
+
 exports.logout = function(req, res){
 	req.session.destroy();
 	res.redirect('/');

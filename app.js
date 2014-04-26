@@ -74,6 +74,8 @@ app.get('/chooseCarToMnt', routes.chooseCarToMnt);
 app.get('/startMnting/:carID', routes.startMnting);
 app.get('/startBagageMnting/:bagageID', routes.startBagageMnting);
 app.get('/logout', routes.logout);
+app.get('/version', routes.versionIndex);
+
 
 app.post('/userList', user.list);
 app.get('/userIndex', user.index);
