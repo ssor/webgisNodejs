@@ -65,7 +65,11 @@ exports.right = function(req, res){
 	res.render('right');
 };
 exports.left = function(req, res){
-	res.render('left');
+	if(req.session.username == "admin"){
+		res.render('left_admin');
+	}else{
+		res.render('left');
+	}
 };
 exports.top = function(req, res){
 	res.render('top', {nickname: req.session.nickname});
