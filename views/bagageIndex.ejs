@@ -26,7 +26,7 @@
     <div id="tb">
         <a href="#" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="startMnt()">地图监控</a>
         <a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="refresh_grid()">刷新</a>
-        <!-- <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deleteRows()">删除</a> -->
+        <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deleteRows()">删除</a>
         <!-- <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="test()">测试</a>         -->
     </div>
     <table id = "grid1"></table>
@@ -189,11 +189,9 @@
             if (r){
                 var rows = grid1.datagrid('getSelections');
                 if(rows.length > 0){
-                    var json = {carID: rows[0].carID};
+                    var json = {bagageID: rows[0].bagageID};
                     $.ajax({
-                        url: "/deleteCar",
-                        // contentType: "text/plain",
-                        // data: JSON.stringify(json),
+                        url: "/removeBagageCarBinding",
                         data: json,
                         type: "post",
                         success: function (text) {
@@ -214,7 +212,6 @@
                     });                
                     refresh_grid();                    
                 }
-
             }
         });     
     }   

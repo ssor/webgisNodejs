@@ -198,22 +198,22 @@ function initiallatestCarPointList(_carPointDBList){
 	console.log('initiallatestCarPointList ...'.info);
 
 	_.each(_carPointDBList, function(_dbInfo){
-		console.log(_dbInfo.carID);
+		// console.log(_dbInfo.carID);
 		var localEP = new EventProxy();
 		var date = new Date();
 		date.setDate(date.getDate() - LATEST_POINT_INTERVAL);
 		dateStart = date.format('yyyy-MM-dd hh:mm:ss'.info);
-		console.log(('latestPoint start from ' + dateStart).info);
+		// console.log(('latestPoint start from ' + dateStart).info);
 		getPointListFromDB(_dbInfo.carID, {timeStamp: {$gte: dateStart}}, localEP);	
 		localEP.once('getPointListFromDBOver', function(pointList){
 			if(_.size(pointList) > 0){
 				pointList = _.sortBy(pointList, function(_point){return _point.timeStamp;});
 				// console.dir(pointList);
 				if(_.size(pointList) > 0){
-					console.log('latestPoint =>'.info);
+					// console.log('latestPoint =>'.info);
 					var point = pointList[_.size(pointList) - 1];
 					point.imageName = 'rt.png';
-					console.dir(point);
+					// console.dir(point);
 					latestCarPointList.push(point);
 				}			
 			}

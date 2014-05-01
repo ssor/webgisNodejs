@@ -1,8 +1,8 @@
 var _          = require('underscore');
-var EventProxy = require('eventproxy');
+// var EventProxy = require('eventproxy');
 var Car = require('./defCar');
+var Q = require('q');
 
-// var localEP = new EventProxy();
 
 exports.index = function(req, res){
 	res.render('carIndex', {_carTypes: JSON.stringify(getCarTypeList())});
@@ -32,6 +32,7 @@ exports.addCar = function(req, res){
 	var carType = req.body.carType;
 	var note = req.body.note;
 	console.log(('addCarID => ' + carID + '  ' + carType + '  ' + note).info);
+
 	cardb.findOne({carID: carID}, function(err, car){
 		if(err){
 			console.log(('error while find car ' + carID + ' in db').error);
@@ -60,61 +61,64 @@ exports.carList = function(req, res){
 		console.log('no login yet'.error);
 		res.send('');return;
 	}
-	var localEP = new EventProxy();
-	getCarListOfSpecifiedUser(req.session.username, localEP);
-	getCarBagageMap(localEP);
 
-	localEP.all('getCarListOver', 'getCarBagageMapOver', function(_carlist, _mapList){
-		var carsInfoReturn = _.map(_carlist, function(_car){
-			var bagageList = _.findWhere(_mapList, {carID: _car.carID});
-			var bagageBinded = (_.size(bagageList) > 0);
-			return {carID: _car.carID, carType: _car.carType, note: _car.note, timeStamp: _car.timeStamp, bagageBinded: bagageBinded};
-		});
-		console.dir(carsInfoReturn);
-		res.send(JSON.stringify(carsInfoReturn));
-	})
-	localEP.fail(function(err){
+	carListResBack(req.session.username)
+	.then(function(_carlist){
+		res.send(JSON.stringify(_carlist));
+	}).catch(function(err){
+		console.log('error <= carList'.error);
 		res.send('');
 	});
-	// var selector = {owner: req.session.username};
-	// if(req.session.username == 'admin'){
-	// 	selector = {};
-	// }
-	// cardb.find(selector, function(err, _cars){
-	// 	if(err){
-	// 		res.send('');			
-	// 	}
-	// 	var cars = _.map(_cars, function(_car){
-	// 		return {carID: _car.carID, carType: _car.carType, note: _car.note, timeStamp: _car.timeStamp};
-	// 	});
-	// 	res.send(JSON.stringify(cars));
-	// });
-	return;
 };
+
+exports.carListForClient = function(req, res){
+	var username = req.body.token;
+	
+	carListResBack(username)
+	.then(function(_carlist){
+		res.send(JSON.stringify(_carlist));
+	}).catch(function(err){
+		console.log('error <= carListForClient'.error);
+		console.dir(err);
+		res.send('');	
+	});
+}
+function carListResBack(_userName){
+	var selector = {owner: _userName};
+	if(_userName == 'admin'){
+		selector = {};
+	}
+	return cardbFind(selector)
+	.then(function(_carlist){
+		return (cardbFind({}))
+		.then(function(_mapList){
+			var carsInfoReturn = _.map(_carlist, function(_car){
+				var bagageList = _.findWhere(_mapList, {carID: _car.carID});
+				var bagageBinded = (_.size(bagageList) > 0);		
+				// var bagageBinded = false;	
+				return {carID: _car.carID, carType: _car.carType, note: _car.note, timeStamp: _car.timeStamp, bagageBinded: bagageBinded};
+			});
+			// console.dir(carsInfoReturn);
+			return carsInfoReturn;				
+		})
+	});
+	return;		
+}
 exports.carTypeList = function(req, res){
 	res.send(JSON.stringify(getCarTypeList()));
 };
 exports.getCarTypeList = getCarTypeList;
 exports.getCarListOfSpecifiedUser = getCarListOfSpecifiedUser;
 //****************************************************
-function getCarBagageMap(_ep){
-	bagagedb.find({}, _ep.doneLater('getCarBagageMapOver'));
-};
+// function getCarBagageMap(_ep){
+// 	bagagedb.find({}, _ep.doneLater('getCarBagageMapOver'));
+// };
 function getCarListOfSpecifiedUser(_user, _ep){
 	var selector = {owner: _user};
 	if(_user == 'admin'){
 		selector = {};
 	}
 	cardb.find(selector, _ep.doneLater('getCarListOver'));
-	// cardb.find(selector, function(err, _cars){
-	// 	if(err){
-	// 		_ep.emitLater('getCarListOver', []);			
-	// 	}
-	// 	var cars = _.map(_cars, function(_car){
-	// 		return {carID: _car.carID, carType: _car.carType, note: _car.note, timeStamp: _car.timeStamp};
-	// 	});
-	// 	_ep.emitLater('getCarListOver', cars);			
-	// });
 }
 function getCarTypeList(){
 	var list = [];

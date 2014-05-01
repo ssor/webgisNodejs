@@ -25,11 +25,30 @@ colors.setTheme({
 var EventProxy = require('eventproxy');
 globalEP = new EventProxy();
 
+var Q = require('q');
+
 var Datastore  = require('nedb');
 cardb      = new Datastore({ filename: 'car.db', autoload: true });
+
+cardbFind = Q.nbind(cardb.find, cardb);
+cardbfindOne = Q.nbind(cardb.findOne, cardb);
+
 bagagedb      = new Datastore({ filename: 'bagage.db', autoload: true });
+
+bagagedbFind = Q.nbind(bagagedb.find, bagagedb);
+bagagedbRemove = Q.nbind(bagagedb.remove, bagagedb);
+bagagedbInsert = Q.nbind(bagagedb.insert, bagagedb);
+
 userdb      = new Datastore({ filename: 'user.db', autoload: true });
+userdbFind = Q.nbind(userdb.find, userdb);
+userdbInsert = Q.nbind(userdb.insert, userdb);
+userdbRemove = Q.nbind(userdb.remove, userdb);
+userdbFindOne = Q.nbind(userdb.findOne, userdb);
+
+
 bagageRecordDB = new Datastore({ filename: 'bagagerecord.db', autoload: true });
+
+bagageRecordDBInsert = Q.nbind(bagageRecordDB.insert, bagageRecordDB);
 
 var express = require('express');
 var routes = require('./routes');
@@ -75,7 +94,7 @@ app.get('/startMnting/:carID', routes.startMnting);
 app.get('/startBagageMnting/:bagageID', routes.startBagageMnting);
 app.get('/logout', routes.logout);
 app.get('/version', routes.versionIndex);
-
+app.get('/errorPage', routes.errorPage);
 
 app.post('/userList', user.list);
 app.get('/userIndex', user.index);
@@ -86,6 +105,7 @@ app.post('/postNewPassword', user.postNewPassword);
 app.post('/resetpwd', user.resetpwd);
 
 app.post('/carList', car.carList);
+app.post('/carListForClient', car.carListForClient);
 app.get('/carIndex', car.index);
 app.post('/addCar', car.addCar);
 app.post('/deleteCar', car.deleteCar);
@@ -95,11 +115,13 @@ app.post('/bagageList', bagage.bagageList);
 app.get('/bagageIndex', bagage.index);
 app.post('/addBagageCarBinding', bagage.addBagageCarBinding);
 app.post('/removeBagageCarBinding', bagage.removeBagageCarBinding);
+app.post('/removeBagageCarBindingForClient', bagage.removeBagageCarBindingForClient);
 app.post('/gerBagageRecord', bagage.gerBagageRecord);
 app.get('/bagageStatusIndex/:bagageID', bagage.bagageStatusIndex);
 app.post('/getBagageStatus', bagage.getBagageStatus);
 app.get('/b', bagage.bagageLoginIndex);
 app.get('/getBagageExits/:bagageID', bagage.getBagageExits);
+app.post('/bagageListBindedWithCarID', bagage.bagageListBindedWithCarID);
 
 // app.post('/mobileCarList', mobileClient.carList);
 app.get('/mobile', mobileClient.index);

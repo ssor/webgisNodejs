@@ -22,8 +22,8 @@ function Executor () {
     // Always tell the queue task is complete. Execute callback if any was given.
     if (typeof lastArg === 'function') {
       callback = function () {
+        process.nextTick(cb);
         lastArg.apply(null, arguments);
-        cb();
       };
 
       newArguments[newArguments.length - 1] = callback;
