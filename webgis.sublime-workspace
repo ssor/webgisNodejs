@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"remo",
+				"removedBagage"
+			],
+			[
+				"er",
+				"error"
+			],
+			[
+				"us",
+				"userdb"
+			],
+			[
+				"ba",
+				"bagagedbFind"
+			],
+			[
+				"q",
+				"Q"
+			],
+			[
+				"bagdb",
+				"bagagedb"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"res",
+				"results"
+			],
+			[
+				"_ca",
+				"_carlist"
+			],
+			[
+				"fin",
+				"find"
+			],
+			[
+				"_c",
+				"_carlist"
+			],
+			[
 				"carl",
 				"carListResBack"
 			],
@@ -22,10 +66,6 @@
 			[
 				"la",
 				"latestPoint"
-			],
-			[
-				"er",
-				"error"
 			],
 			[
 				"tim",
@@ -54,10 +94,6 @@
 			[
 				"ima",
 				"imageName"
-			],
-			[
-				"ba",
-				"bagageID"
 			],
 			[
 				"badb",
@@ -172,10 +208,6 @@
 				"localEP"
 			],
 			[
-				"_c",
-				"_car"
-			],
-			[
 				"te",
 				"testA"
 			],
@@ -188,10 +220,6 @@
 				"userdb"
 			],
 			[
-				"us",
-				"user"
-			],
-			[
 				"usn",
 				"username"
 			],
@@ -202,10 +230,6 @@
 			[
 				"log",
 				"logout"
-			],
-			[
-				"fin",
-				"findOne"
 			],
 			[
 				"use",
@@ -310,10 +334,6 @@
 			[
 				"ne",
 				"newEpcType"
-			],
-			[
-				"req",
-				"requestListEpc_handler"
 			],
 			[
 				"requ",
@@ -494,261 +514,16 @@
 			[
 				"obj",
 				"objMsg"
-			],
-			[
-				"ser",
-				"serverList"
-			],
-			[
-				"bo",
-				"box1"
-			],
-			[
-				"im",
-				"image"
-			],
-			[
-				"_ty",
-				"_typeInfo"
-			],
-			[
-				"_e",
-				"_epcResponse"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "routes/api.js",
-			"settings":
-			{
-				"buffer_size": 772,
-				"line_ending": "Unix",
-				"name": "// api"
-			}
-		},
-		{
 			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 3768,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/index.ejs",
-			"settings":
-			{
-				"buffer_size": 3142,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/main.ejs",
-			"settings":
-			{
-				"buffer_size": 679,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/version.ejs",
-			"settings":
-			{
-				"buffer_size": 1656,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/top.ejs",
-			"settings":
-			{
-				"buffer_size": 1237,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/stylesheets/skin.css",
-			"settings":
-			{
-				"buffer_size": 5953,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/chooseCarToMnt.ejs",
-			"settings":
-			{
-				"buffer_size": 3837,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/left.ejs",
-			"settings":
-			{
-				"buffer_size": 2219,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/left_admin.ejs",
-			"settings":
-			{
-				"buffer_size": 2320,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/stylesheets/index-theme.css",
-			"settings":
-			{
-				"buffer_size": 1456,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/carIndex.ejs",
-			"settings":
-			{
-				"buffer_size": 9180,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/right.ejs",
-			"settings":
-			{
-				"buffer_size": 3077,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/startMnting.ejs",
-			"settings":
-			{
-				"buffer_size": 5954,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/userIndex.ejs",
-			"settings":
-			{
-				"buffer_size": 9867,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/changepwd.ejs",
-			"settings":
-			{
-				"buffer_size": 3287,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/mobileIndex.ejs",
-			"settings":
-			{
-				"buffer_size": 4784,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "views/startReplaying.ejs",
-			"settings":
-			{
-				"buffer_size": 8019,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/bagageIndex.ejs",
-			"settings":
-			{
-				"buffer_size": 7931,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/uploadgps.ejs",
-			"settings":
-			{
-				"buffer_size": 8533,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/bagageStatusIndex.ejs",
-			"settings":
-			{
-				"buffer_size": 3384,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/bagageLoginIndex.ejs",
-			"settings":
-			{
-				"buffer_size": 2915,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/startBagageMnting.ejs",
-			"settings":
-			{
-				"buffer_size": 5999,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/setRoutePara.ejs",
-			"settings":
-			{
-				"buffer_size": 4579,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/javascripts/tools.js",
-			"settings":
-			{
-				"buffer_size": 1760,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "routes/mobile.js",
-			"settings":
-			{
-				"buffer_size": 7527,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "routes/defCar.js",
-			"settings":
-			{
-				"buffer_size": 245,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "routes/car.js",
-			"settings":
-			{
-				"buffer_size": 4176,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "routes/bagage.js",
-			"settings":
-			{
-				"buffer_size": 6652,
+				"buffer_size": 4496,
 				"line_ending": "Unix"
 			}
 		},
@@ -756,40 +531,39 @@
 			"file": "routes/index.js",
 			"settings":
 			{
-				"buffer_size": 13734,
+				"buffer_size": 3467,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "routes/saveCarPosImg.js",
+			"file": "routes/bagage.js",
 			"settings":
 			{
-				"buffer_size": 4567,
-				"line_ending": "Unix",
-				"name": "var http = require(\"http\");"
-			}
-		},
-		{
-			"file": "routes/authorize.js",
-			"settings":
-			{
-				"buffer_size": 182,
+				"buffer_size": 9997,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "routes/user.js",
+			"file": "routes/api.js",
 			"settings":
 			{
-				"buffer_size": 4148,
+				"buffer_size": 1004,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "routes/checkMemory.js",
+			"file": "views/bagageIndex.ejs",
 			"settings":
 			{
-				"buffer_size": 2220,
+				"buffer_size": 7831,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/version.ejs",
+			"settings":
+			{
+				"buffer_size": 1845,
 				"line_ending": "Unix"
 			}
 		}
@@ -818,15 +592,47 @@
 	},
 	"file_history":
 	[
-		"/Users/ssor/Documents/program/nodejs/webgis/routes/timeFormat.js",
+		"/Users/ssor/Documents/program/nodejs/webgis/routes/api.js",
+		"/Users/ssor/Documents/program/nodejs/webgis/app.js",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/index.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/errorPage.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/main.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/version.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/top.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/chooseCarToMnt.ejs",
 		"/Users/ssor/Documents/program/nodejs/webgis/views/left.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/left_admin.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/carIndex.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/startMnting.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/userIndex.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/changepwd.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/mobileIndex.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/startReplaying.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/bagageIndex.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/uploadgps.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/bagageStatusIndex.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/bagageLoginIndex.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/startBagageMnting.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/setRoutePara.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/routes/mobile.js",
+		"/Users/ssor/Documents/program/nodejs/webgis/public/javascripts/tools.js",
+		"/Users/ssor/Documents/program/nodejs/webgis/routes/defCar.js",
+		"/Users/ssor/Documents/program/nodejs/webgis/routes/car.js",
+		"/Users/ssor/Documents/program/nodejs/webgis/routes/bagage.js",
+		"/Users/ssor/Documents/program/nodejs/webgis/routes/index.js",
+		"/Users/ssor/Documents/program/nodejs/webgis/routes/saveCarPosImg.js",
+		"/Users/ssor/Documents/program/nodejs/webgis/routes/authorize.js",
+		"/Users/ssor/Documents/program/nodejs/webgis/routes/user.js",
+		"/Users/ssor/Documents/program/nodejs/webgis/public/stylesheets/index-theme.css",
+		"/Users/ssor/Documents/program/nodejs/webgis/public/stylesheets/skin.css",
+		"/Users/ssor/Documents/program/nodejs/webgis/views/right.ejs",
+		"/Users/ssor/Documents/program/nodejs/webgis/routes/checkMemory.js",
+		"/Users/ssor/Documents/program/nodejs/webgis/routes/timeFormat.js",
 		"/Users/ssor/Documents/program/nodejs/webgis/public/javascripts/timeFormat.js",
 		"/Users/ssor/Documents/program/nodejs/webgis/views/mobileIndex2.ejs",
 		"/Users/ssor/Documents/program/nodejs/webgis/views/uploadgps2.ejs",
 		"/Users/ssor/Documents/program/nodejs/webgis/views/f7form.ejs",
 		"/Users/ssor/Documents/program/nodejs/webgis/public/stylesheets/framework7.css",
-		"/Users/ssor/Documents/program/nodejs/webgis/views/changepwd.ejs",
-		"/Users/ssor/Documents/program/nodejs/webgis/public/stylesheets/skin.css",
 		"/Users/ssor/Desktop/webgis/Tpl/Monitor/startMnting.html",
 		"/Users/ssor/Desktop/webgis/Tpl/Monitor/chooseCartoMnt.html",
 		"/Users/ssor/Desktop/webgis/Tpl/Mobile/index.html",
@@ -834,7 +640,6 @@
 		"/Users/ssor/Desktop/webgis/Tpl/Monitor/top.html",
 		"/Users/ssor/Desktop/webgis/Tpl/Monitor/left.html",
 		"/Users/ssor/Desktop/webgis/Tpl/Monitor/right.html",
-		"/Users/ssor/Documents/program/nodejs/webgis/views/mobileIndex.ejs",
 		"/Users/ssor/Documents/program/nodejs/webgis/routes/epc.js",
 		"/Users/ssor/Desktop/webgis/Tpl/UserManagement/UserIndex.html",
 		"/Users/ssor/Documents/program/nodejs/weathermonitor/public/javascripts/tools.js",
@@ -900,6 +705,44 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"timeFormater",
+			"removeBagageCarBinding",
+			"removedBagage",
+			"deleteRows",
+			"bagageID",
+			"authorize",
+			"validateUser",
+			"userModule",
+			"getPointListFromDB",
+			"initiallatestCarPointList",
+			"initialCarPointDB",
+			"EventProxy",
+			"typeInfoDB",
+			"EventProxy",
+			"249",
+			"getBindedCarID",
+			"eventproxy",
+			"EventProxy",
+			"_carID",
+			"getBindedCarID",
+			"getBagageList",
+			"_owner",
+			"getBagageList",
+			"eventInsertBagageCarBindingRecord2DB",
+			"insertBagageCarBindingRecord2DB",
+			"insertBagageCarBinding2DB",
+			"newBagage",
+			"insertBagageCarBinding2DB",
+			"eventInsertBagageCarBindingRecord2DB",
+			"insertBagageCarBindingRecord2DB",
+			"removeBagageCarBindingFromDB",
+			"findOne",
+			"getCarListOfSpecifiedUser",
+			"getCarBagageMap",
+			"carListResBack",
+			"_user",
+			"carListResBack",
+			"_bagage",
 			"getBagageList",
 			"getBagageWithCarIDAndBagageID",
 			"insertBagageCarBinding2DB",
@@ -989,45 +832,7 @@
 			"img",
 			"itemTypes",
 			"username",
-			"authorize",
-			"newpassword",
-			"currentPassword",
-			"h3",
-			"false",
-			";\n",
-			"strTime",
-			"postgps",
-			"g_mark",
-			"carID",
-			"CarID",
-			"carid",
-			"carID",
-			"carid",
-			"CarID",
-			"carid",
-			"carID",
-			"g_infowindow",
-			"getRowIndex",
-			"top",
-			"__PUBLIC__",
-			"Images",
-			"left",
-			"right",
-			"5",
-			"itemID",
-			"userID",
-			"userName",
-			"userID",
-			"user",
-			"users",
-			"addUser",
-			"deleteUser",
-			"db",
-			"epcdb",
-			"WebSocket",
-			"websocket",
-			"WebSocket",
-			"flag"
+			"authorize"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1045,51 +850,23 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "routes/api.js",
-					"settings":
-					{
-						"buffer_size": 772,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								73,
-								73
-							]
-						],
-						"settings":
-						{
-							"auto_name": "// api",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "app.js",
 					"settings":
 					{
-						"buffer_size": 3768,
+						"buffer_size": 4496,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2488,
-								2504
+								451,
+								256
 							]
 						],
 						"settings":
@@ -1099,57 +876,97 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1114.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "routes/index.js",
+					"settings":
+					{
+						"buffer_size": 3467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3129,
+								3129
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "views/index.ejs",
+					"file": "routes/bagage.js",
 					"settings":
 					{
-						"buffer_size": 3142,
+						"buffer_size": 9997,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1271,
-								1275
+								85,
+								97
+							],
+							[
+								5537,
+								5549
+							],
+							[
+								6318,
+								6330
+							],
+							[
+								6822,
+								6834
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 246.0,
+						"translation.y": 3144.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "views/main.ejs",
+					"file": "routes/api.js",
 					"settings":
 					{
-						"buffer_size": 679,
+						"buffer_size": 1004,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								679
+								298,
+								147
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1159,45 +976,46 @@
 				},
 				{
 					"buffer": 4,
-					"file": "views/version.ejs",
+					"file": "views/bagageIndex.ejs",
 					"settings":
 					{
-						"buffer_size": 1656,
+						"buffer_size": 7831,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								765,
-								765
+								6828,
+								6828
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 168.0,
+						"translation.y": 1926.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "views/top.ejs",
+					"file": "views/version.ejs",
 					"settings":
 					{
-						"buffer_size": 1237,
+						"buffer_size": 1845,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								774,
-								774
+								219,
+								219
 							]
 						],
 						"settings":
@@ -1206,771 +1024,6 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "public/stylesheets/skin.css",
-					"settings":
-					{
-						"buffer_size": 5953,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2691,
-								2691
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2757.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "views/chooseCarToMnt.ejs",
-					"settings":
-					{
-						"buffer_size": 3837,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1019,
-								1025
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 126.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "views/left.ejs",
-					"settings":
-					{
-						"buffer_size": 2219,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1577,
-								1577
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 753.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "views/left_admin.ejs",
-					"settings":
-					{
-						"buffer_size": 2320,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "public/stylesheets/index-theme.css",
-					"settings":
-					{
-						"buffer_size": 1456,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								106,
-								106
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "views/carIndex.ejs",
-					"settings":
-					{
-						"buffer_size": 9180,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2673,
-								2673
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 638.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "views/right.ejs",
-					"settings":
-					{
-						"buffer_size": 3077,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2995,
-								2995
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "views/startMnting.ejs",
-					"settings":
-					{
-						"buffer_size": 5954,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								684,
-								684
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "views/userIndex.ejs",
-					"settings":
-					{
-						"buffer_size": 9867,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8656,
-								8662
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2361.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "views/changepwd.ejs",
-					"settings":
-					{
-						"buffer_size": 3287,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2053,
-								2053
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 648.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "views/mobileIndex.ejs",
-					"settings":
-					{
-						"buffer_size": 4784,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								554,
-								570
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "views/startReplaying.ejs",
-					"settings":
-					{
-						"buffer_size": 8019,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3132,
-								3146
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "views/bagageIndex.ejs",
-					"settings":
-					{
-						"buffer_size": 7931,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1036,
-								1036
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 483.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "views/uploadgps.ejs",
-					"settings":
-					{
-						"buffer_size": 8533,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5226,
-								5226
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 20,
-					"file": "views/bagageStatusIndex.ejs",
-					"settings":
-					{
-						"buffer_size": 3384,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								833,
-								833
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 50.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 21,
-					"file": "views/bagageLoginIndex.ejs",
-					"settings":
-					{
-						"buffer_size": 2915,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								363,
-								363
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 22,
-					"file": "views/startBagageMnting.ejs",
-					"settings":
-					{
-						"buffer_size": 5999,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1575,
-								1575
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 23,
-					"file": "views/setRoutePara.ejs",
-					"settings":
-					{
-						"buffer_size": 4579,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3950,
-								3950
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 24,
-					"file": "public/javascripts/tools.js",
-					"settings":
-					{
-						"buffer_size": 1760,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1730,
-								1741
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 236.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 25,
-					"file": "routes/mobile.js",
-					"settings":
-					{
-						"buffer_size": 7527,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2605,
-								2612
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 26,
-					"file": "routes/defCar.js",
-					"settings":
-					{
-						"buffer_size": 245,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								187,
-								187
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 27,
-					"file": "routes/car.js",
-					"settings":
-					{
-						"buffer_size": 4176,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2395,
-								2411
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 890.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 28,
-					"file": "routes/bagage.js",
-					"settings":
-					{
-						"buffer_size": 6652,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5400,
-								5400
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2684.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 29,
-					"file": "routes/index.js",
-					"settings":
-					{
-						"buffer_size": 13734,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1960,
-								1960
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 350.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 30,
-					"file": "routes/saveCarPosImg.js",
-					"settings":
-					{
-						"buffer_size": 4567,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								777,
-								777
-							]
-						],
-						"settings":
-						{
-							"auto_name": "var http = require(\"http\");",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 1.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 31,
-					"file": "routes/authorize.js",
-					"settings":
-					{
-						"buffer_size": 182,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								58,
-								66
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 32,
-					"file": "routes/user.js",
-					"settings":
-					{
-						"buffer_size": 4148,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2072,
-								2072
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 621.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 33,
-					"file": "routes/checkMemory.js",
-					"settings":
-					{
-						"buffer_size": 2220,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								876,
-								876
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 1.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -2021,8 +1074,16 @@
 		"selected_items":
 		[
 			[
+				"ve",
+				"views/version.ejs"
+			],
+			[
+				"api",
+				"routes/api.js"
+			],
+			[
 				"in",
-				"/Users/ssor/Documents/program/nodejs/webgis/routes/index.js"
+				"routes/index.js"
 			],
 			[
 				"",
