@@ -96,7 +96,7 @@ function downloadMap(_point, _label, _carID){
     var url = "http://api.go2map.com/engine/api/static/image+{'points':'";
     var point = _point.lng + "," + _point.lat; 
     url += point;  
-    url += "',height:'512','width':512,'zoom':11,'center':'"+ point +"',labels:'" + _label + "',pss:'S1756'}.png";
+    url += "',height:'341','width':512,'zoom':11,'center':'"+ point +"',labels:'" + _label + "',pss:'S1756'}.png";
     // console.log(url.info);
     http.get(url, function(res){
         var imgData = "";

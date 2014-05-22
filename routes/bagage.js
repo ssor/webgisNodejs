@@ -50,6 +50,43 @@ exports.getBagageExits = function(req, res){
 	// 	}
 	// });
 }
+exports.getBagageStatus4Weixin = function(req, res){
+	var bagageID = req.params.bagageID;
+	var objError = {status: 'error', message: ''};
+	if(bagageID == null){
+		res.send(JSON.stringify(objError));
+		return;
+	}
+	bagagedbFind({bagageID: bagageID})
+	.then(function(_list){
+		if(_.size(_list) <= 0){
+			// res.send(JSON.stringify(objError));
+			throw new Error('noBagageID')
+			return;
+		} 
+		else{
+			var carID = _list[0].carID;
+			var latestPoint = _.findWhere(latestCarPointList, {carID: carID});
+			if(latestPoint == null){
+				console.log('no point for ' + carID);
+				// var objNoPoint = {status: 'noPoint'};
+				// res.send(JSON.stringify(objNoPoint));
+				throw new Error('noPoint')
+				return;
+			}else{
+				if(latestPoint.sogouLongitude != null){
+					console.log('emit startDownloadMapImage...'.info);
+					globalEP.emit('startDownloadMapImage', {point: {lng: latestPoint.sogouLongitude, lat: latestPoint.sogouLatitude, downloadTimeStamp: latestPoint.downloadTimeStamp}, label: carID, carID: carID});
+				}
+				var objOk = {status: 'ok', bagageID: bagageID, carID: carID, timeStamp: latestPoint.timeStamp, imageName: latestPoint.imageName};
+				res.send(JSON.stringify(objOk));
+			}				
+		} 
+	}).catch(function(error){
+		objError.message = error.message;
+		res.send(JSON.stringify(objError));
+	})	
+}
 exports.getBagageStatus = function(req, res){
 	var bagageID = req.body.bagageID;
 	//查找所在的车，之后查找该车最后的位置信息

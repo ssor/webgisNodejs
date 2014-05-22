@@ -563,7 +563,15 @@
 			"file": "views/version.ejs",
 			"settings":
 			{
-				"buffer_size": 1845,
+				"buffer_size": 2114,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/index.ejs",
+			"settings":
+			{
+				"buffer_size": 3621,
 				"line_ending": "Unix"
 			}
 		}
@@ -850,7 +858,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -903,7 +911,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -959,8 +967,8 @@
 						"selection":
 						[
 							[
-								298,
-								147
+								385,
+								385
 							]
 						],
 						"settings":
@@ -1007,15 +1015,15 @@
 					"file": "views/version.ejs",
 					"settings":
 					{
-						"buffer_size": 1845,
+						"buffer_size": 2114,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								219,
-								219
+								837,
+								837
 							]
 						],
 						"settings":
@@ -1024,7 +1032,34 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 123.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "views/index.ejs",
+					"settings":
+					{
+						"buffer_size": 3621,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								833,
+								833
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 115.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

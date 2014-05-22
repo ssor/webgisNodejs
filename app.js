@@ -122,6 +122,7 @@ app.post('/getBagageStatus', bagage.getBagageStatus);
 app.get('/b', bagage.bagageLoginIndex);
 app.get('/getBagageExits/:bagageID', bagage.getBagageExits);
 app.post('/bagageListBindedWithCarID', bagage.bagageListBindedWithCarID);
+app.get('/getBagageStatus4Weixin/:bagageID', bagage.getBagageStatus4Weixin);
 
 // app.post('/mobileCarList', mobileClient.carList);
 app.get('/mobile', mobileClient.index);
