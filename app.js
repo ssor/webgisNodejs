@@ -125,6 +125,7 @@ app.post('/bagageListBindedWithCarID', bagage.bagageListBindedWithCarID);
 app.get('/getBagageStatus4Weixin/:bagageID', bagage.getBagageStatus4Weixin);
 
 // app.post('/mobileCarList', mobileClient.carList);
+app.get('/mobileLogin', mobileClient.mobileLoginIndex);
 app.get('/mobile', mobileClient.index);
 app.get('/uploadgps/:carID', mobileClient.uploadgps);
 app.post('/postgps', mobileClient.postgps);

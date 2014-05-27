@@ -32,23 +32,6 @@ exports.getBagageExits = function(req, res){
 		console.dir(error);
 		res.send('error');
 	})
-
-
-	// var localEP = new EventProxy();
-	// localEP.fail(function(error){
-	// 	res.send('error');
-	// 	return;
-	// })
-	// bagagedb.find(selector, localEP.doneLater('getBagageOver'));
-	// localEP.once('getBagageOver', function(_bagages){
-	// 	// console.log('getBagageOver...'.info);
-	// 	// console.dir(_bagages);
-	// 	if(_.size(_bagages) <= 0){
-	// 		res.send('failed');return;
-	// 	}else{
-	// 		res.send('ok');
-	// 	}
-	// });
 }
 exports.getBagageStatus4Weixin = function(req, res){
 	var bagageID = req.params.bagageID;
@@ -115,29 +98,6 @@ exports.getBagageStatus = function(req, res){
 		console.dir(error);
 		res.send('error');
 	})
-
-
-	// var localEP = new EventProxy();
-	// getBindedCarID(bagageID, localEP);
-	// localEP.once('getBindedCarIDOver', function(_carID){
-	// 	console.log(('bagageID '+ bagageID +' bind car ' + _carID).info);
-	// 	if(_carID == null){
-	// 		res.send('');
-	// 		return;
-	// 	}
-	// 	// console.dir(latestCarPointList);
-	// 	var latestPoint = _.findWhere(latestCarPointList, {carID: _carID});
-	// 	if(latestPoint == null){
-	// 		console.log('no point for ' + _carID);
-	// 		res.send('');return;
-	// 	}else{
-	// 		if(latestPoint.sogouLongitude != null){
-	// 			console.log('emit startDownloadMapImage...'.info);
-	// 			globalEP.emit('startDownloadMapImage', {point: {lng: latestPoint.sogouLongitude, lat: latestPoint.sogouLatitude, downloadTimeStamp: latestPoint.downloadTimeStamp}, label: _carID, carID: _carID});
-	// 		}
-	// 		res.send(JSON.stringify(latestPoint));
-	// 	}		
-	// });
 }
 exports.index = function(req, res){
 	res.render('bagageIndex');
@@ -163,17 +123,6 @@ exports.bagageList = function(req, res){
 		console.log('error <= bagageList'.error);
 		res.send('error');
 	})
-
-
-	// localEP.once('getBagageListOver',function(_bagageList){
-	// 	var bagageList = _.map(_bagageList, function(_bagage){
-	// 		return {bagageID: _bagage.bagageID, timeStamp: _bagage.timeStamp, note: _bagage.note, carID: _bagage.carID};
-	// 	});
-	// 	res.send(JSON.stringify(bagageList));
-	// });
-	// localEP.fail(function(err){
-	// 	res.send('');
-	// });	
 };
 exports.bagageListBindedWithCarID = function(req, res){
 	var carID = req.body.carID;
@@ -190,20 +139,7 @@ exports.bagageListBindedWithCarID = function(req, res){
 		console.log('error <= bagageListBindedWithCarID'.error);
 		console.dir(error);
 		res.send('error');
-	})
-
-	// var localEP = new EventProxy();
-	// bagagedb.find(selector, localEP.doneLater('getBagageListOver'));
-
-	// localEP.once('getBagageListOver',function(_bagageList){
-	// 	var bagageList = _.map(_bagageList, function(_bagage){
-	// 		return {bagageID: _bagage.bagageID, timeStamp: _bagage.timeStamp, note: _bagage.note, carID: _bagage.carID};
-	// 	});
-	// 	res.send(JSON.stringify(bagageList));
-	// });
-	// localEP.fail(function(err){
-	// 	res.send('');
-	// });		
+	})	
 }
 exports.addBagageCarBinding = function(req, res){
 	var body = req.body;
@@ -225,8 +161,6 @@ exports.addBagageCarBinding = function(req, res){
 		console.log('error <= addBagageCarBinding'.error);
 		res.send('error');
 	})
-	// globalEP.emitLater('newBagage', {carID: id, bagageID: bagageID, data: newBagage, res: res});
-	// res.send('ok');
 	return;
 };
 
@@ -240,48 +174,63 @@ exports.removeBagageCarBinding = function(req, res){
 		res.send('error');
 		return;
 	}		
-	var removedBagage = {bagageID: bagageID, timeStamp: timeFormater(), owner: owner, carID: id};
+	// var removedBagage = {bagageID: bagageID, timeStamp: timeFormater(), owner: owner, carID: id};
 	// console.log('removedBagage => '.info);
 	// console.dir(removedBagage);
-	_removeBagageCarBinding(req, res, removedBagage);
+	_removeBagageCarBinding(bagageID, owner, id)
+	.then(function(){
+		res.send('ok');
+	})
+	.catch(function(error){
+		res.send(error.message);
+	});
 }
 exports.removeBagageCarBindingForClient = function(req, res){
 	//移除单号不需要绑定车辆的编号
-	var body = req.body;
-	var id = body.carID;
+	var body 	 = req.body;
+	var id 		 = body.carID;
 	var bagageID = body.bagageID;	
-	var owner = body.token;
+	var owner 	 = body.token;
+
 	if(owner == null || bagageID == null || bagageID.length <= 0){
 		res.send('error');
 		return;
 	}		
-	var removedBagage = {bagageID: bagageID, timeStamp: timeFormater(), owner: owner, carID: id};
+	// var removedBagage = {bagageID: bagageID, timeStamp: timeFormater(), owner: owner, carID: id};
 	// console.log('removedBagage => '.info);
 	// console.dir(removedBagage);
-	_removeBagageCarBinding(req, res, removedBagage);
+	_removeBagageCarBinding(bagageID, owner, id)
+	.then(function(){
+		res.send('ok');
+	})
+	.catch(function(error){
+		res.send(error.message);
+	});
 }
-function _removeBagageCarBinding(req, res, removedBagage){
-	bagagedbRemove({bagageID: removedBagage.bagageID, owner: removedBagage.owner})
+function _removeBagageCarBinding(bagageID, owner, carID){
+	// var removedBagage = {bagageID: bagageID, timeStamp: timeFormater(), owner: owner, carID: id};
+	bagagedbRemove({bagageID: bagageID, owner: owner})
 	.then(function(_numRemoved){
 		if(_numRemoved > 0){
 			console.log('removeBagageCarBindingFromDB ok !'.data);
-			var record = {carID: removedBagage.carID, bagageID: removedBagage.bagageID, timeStamp: removedBagage.timeStamp, owner: removedBagage.owner};
+			var record = {carID: carID, bagageID: bagageID, timeStamp: timeFormater(), owner: owner};
 			record.event = "unbindBagageAndCar";
 			return bagageRecordDBInsert(record)
 				.then(function(_record){
 					console.log('insertBagageCarBindingRecord2DB ok!'.data);
-					res.send('ok');			
+					// res.send('ok');	
+					return _record;		
 				})
-			// res.send('ok');			
 		}else{
 			console.log('no such bagageID to remove!!'.error);
-			res.send('noSuchData');
+			// res.send('noSuchData');
+			throw new Error('noSuchData');
 		}
 	}).catch(function(error){
 		console.log('error <= removeBagageCarBinding'.error);
-		res.send('error');
+		// res.send('error');
+		throw new Error('error');
 	})
-	return;	
 }
 
 exports.gerBagageRecord = function(req, res){
@@ -306,12 +255,6 @@ function getBindedCarID(_bagageID){
 		if(_.size(_list) <= 0) return null;
 		else return _list[0].carID;
 	});
-
-	// bagagedb.find({bagageID: _bagageID}, function(err, _list){
-	// 	if(err) _ep.emitLater('getBindedCarIDOver', null);
-	// 	if(_.size(_list) <= 0) _ep.emitLater('getBindedCarIDOver', null);
-	// 	else _ep.emitLater('getBindedCarIDOver', _list[0].carID);
-	// });
 }
 function insertBagageCarBinding2DB(_bagage){
 	return bagagedbFind({bagageID: _bagage.bagageID})
@@ -332,29 +275,6 @@ function insertBagageCarBinding2DB(_bagage){
 		}
 	})
 	return;
-
-	// var localEP = new EventProxy();
-	// localEP.fail(function(err){
-	// 	console.log('insertBagageCarBinding2DB error'.error);
-	// 	_bagage.res.send('error');
-	// });
-
-	// bagagedb.find({bagageID: _bagage.bagageID}, localEP.doneLater('getBagageWithBagageID'));
-	// localEP.once('getBagageWithBagageID', function(_list){
-	// 	if(_.size(_list) > 0){
-	// 		console.log('this bagage already exits!'.error);
-	// 		_bagage.res.send('duplicated');
-	// 	}else{
-	// 		bagagedb.insert(_bagage.data, localEP.doneLater('insertBagageCarBinding2DBOver'));
-	// 	}
-	// });
-	// localEP.once('insertBagageCarBinding2DBOver', function(_b){
-	// 	console.log('insert a bagage to db ok!'.data);
-	// 	//将绑定记录添加到数据库中
-	// 	_b.event = "bindBagageAndCar";
-	// 	globalEP.emitLater('eventInsertBagageCarBindingRecord2DB', _b);
-	// 	_bagage.res.send('ok');
-	// });
 }
 
 //******************************************************

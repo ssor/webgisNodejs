@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"_c",
+				"_car"
+			],
+			[
+				"bag",
+				"bagage"
+			],
+			[
+				"ob",
+				"objError"
+			],
+			[
+				"obj",
+				"objOk"
+			],
+			[
+				"ba",
+				"bagageID"
+			],
+			[
+				"getb",
+				"getBagageStatus"
+			],
+			[
 				"remo",
 				"removedBagage"
 			],
@@ -14,10 +38,6 @@
 			[
 				"us",
 				"userdb"
-			],
-			[
-				"ba",
-				"bagagedbFind"
 			],
 			[
 				"q",
@@ -42,10 +62,6 @@
 			[
 				"fin",
 				"find"
-			],
-			[
-				"_c",
-				"_carlist"
 			],
 			[
 				"carl",
@@ -110,10 +126,6 @@
 			[
 				"getCid",
 				"getBindedCarIDOver"
-			],
-			[
-				"getb",
-				"getBindedCarID"
 			],
 			[
 				"str",
@@ -502,18 +514,6 @@
 			[
 				"tg",
 				"tags"
-			],
-			[
-				"serv",
-				"server"
-			],
-			[
-				"sub",
-				"subscribedtags"
-			],
-			[
-				"obj",
-				"objMsg"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 4496,
+				"buffer_size": 4629,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,7 +531,7 @@
 			"file": "routes/index.js",
 			"settings":
 			{
-				"buffer_size": 3467,
+				"buffer_size": 3191,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,7 +539,7 @@
 			"file": "routes/bagage.js",
 			"settings":
 			{
-				"buffer_size": 9997,
+				"buffer_size": 8245,
 				"line_ending": "Unix"
 			}
 		},
@@ -563,7 +563,7 @@
 			"file": "views/version.ejs",
 			"settings":
 			{
-				"buffer_size": 2114,
+				"buffer_size": 2319,
 				"line_ending": "Unix"
 			}
 		},
@@ -571,7 +571,39 @@
 			"file": "views/index.ejs",
 			"settings":
 			{
-				"buffer_size": 3621,
+				"buffer_size": 3626,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/saveCarPosImg.js",
+			"settings":
+			{
+				"buffer_size": 4567,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/car.js",
+			"settings":
+			{
+				"buffer_size": 3657,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/mobile.js",
+			"settings":
+			{
+				"buffer_size": 8248,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/mobileLoginIndex.ejs",
+			"settings":
+			{
+				"buffer_size": 3359,
 				"line_ending": "Unix"
 			}
 		}
@@ -713,6 +745,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"getCarList",
+			"getCarListOfSpecifiedUser",
+			"getPointListFromDB",
+			"getCarListOver",
+			"_removeBagageCarBinding",
+			"statelistAll",
+			"obj",
 			"timeFormater",
 			"removeBagageCarBinding",
 			"removedBagage",
@@ -833,14 +872,7 @@
 			"itemID",
 			"writeToScreen",
 			"addElementIDToList",
-			"loopToGetEventInfo",
-			");\n",
-			"addElementIDToList",
-			"elementIDList",
-			"img",
-			"itemTypes",
-			"username",
-			"authorize"
+			"loopToGetEventInfo"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -866,15 +898,15 @@
 					"file": "app.js",
 					"settings":
 					{
-						"buffer_size": 4496,
+						"buffer_size": 4629,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								451,
-								256
+								4037,
+								4048
 							]
 						],
 						"settings":
@@ -883,7 +915,7 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
+						"translation.x": 3.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -894,15 +926,15 @@
 					"file": "routes/index.js",
 					"settings":
 					{
-						"buffer_size": 3467,
+						"buffer_size": 3191,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3129,
-								3129
+								1089,
+								1069
 							]
 						],
 						"settings":
@@ -910,7 +942,7 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
+						"translation.x": 1.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -921,27 +953,15 @@
 					"file": "routes/bagage.js",
 					"settings":
 					{
-						"buffer_size": 9997,
+						"buffer_size": 8245,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								85,
-								97
-							],
-							[
-								5537,
-								5549
-							],
-							[
-								6318,
-								6330
-							],
-							[
-								6822,
-								6834
+								2412,
+								2412
 							]
 						],
 						"settings":
@@ -950,7 +970,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3144.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1005,7 +1025,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1926.0,
+						"translation.y": 1252.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1015,15 +1035,15 @@
 					"file": "views/version.ejs",
 					"settings":
 					{
-						"buffer_size": 2114,
+						"buffer_size": 2319,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								837,
-								837
+								15,
+								0
 							]
 						],
 						"settings":
@@ -1032,7 +1052,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 123.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1042,15 +1062,15 @@
 					"file": "views/index.ejs",
 					"settings":
 					{
-						"buffer_size": 3621,
+						"buffer_size": 3626,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								833,
-								833
+								889,
+								889
 							]
 						],
 						"settings":
@@ -1059,7 +1079,116 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 115.0,
+						"translation.y": 69.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "routes/saveCarPosImg.js",
+					"settings":
+					{
+						"buffer_size": 4567,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4141,
+								4147
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1309.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "routes/car.js",
+					"settings":
+					{
+						"buffer_size": 3657,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2994,
+								3004
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1602.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "routes/mobile.js",
+					"settings":
+					{
+						"buffer_size": 8248,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1269,
+								1269
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 238.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "views/mobileLoginIndex.ejs",
+					"settings":
+					{
+						"buffer_size": 3359,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1333,
+								1333
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 279.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

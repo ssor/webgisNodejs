@@ -13,16 +13,12 @@
 <script type="text/javascript" src="/javascripts/tools.js"></script>
 <script type="text/javascript">
 	 $(document).ready(function() {
-		// $('#lblTip')[0].text = "1111";
-		// $('#lblTip').text("1111");
 		$(document).keydown(function(event){ 
 			console.log(event.keyCode);
 			if(event.keyCode == 13){//return key
 				login();
 			} 
 		}); 
-		var url = get_host_url() + "/mobileLogin";
-		$('#qrcode').qrcode({width: 100,height: 100,text: url});
 	 });
 	 function login(){
 	 	var username = $('#username')[0].value;
@@ -41,7 +37,7 @@
 
             	if(data == 'ok'){
             		console.log('login success');
-            		top.location.href = get_host_url() + "/main";
+            		top.location.href = get_host_url() + "/mobile";
             	}else{
             		console.log('login failed');
             		$('#lblTip').text("用户名和密码不匹配，请检查输入是否有误！");
@@ -82,11 +78,6 @@
 			<button type="button" class="btn btn-primary btn-lg btn-block" onclick="login()">登录</button>
 	    </div>
 	</div>
-
-<div style="width:100%;text-align:center;">
-	<div id="qrcode"></div>
-	<div >移动终端扫描</div>
-</div>
 
 	<div class= "container">
 	  <div class="row">

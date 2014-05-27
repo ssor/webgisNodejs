@@ -107,12 +107,20 @@ function carListResBack(_userName){
 exports.carTypeList = function(req, res){
 	res.send(JSON.stringify(getCarTypeList()));
 };
-exports.getCarTypeList = getCarTypeList;
-exports.getCarListOfSpecifiedUser = getCarListOfSpecifiedUser;
+exports.getCarTypeList 				= getCarTypeList;
+exports.getCarListOfSpecifiedUser   = getCarListOfSpecifiedUser;
+exports.getCarList 					= getCarList;
 //****************************************************
 // function getCarBagageMap(_ep){
 // 	bagagedb.find({}, _ep.doneLater('getCarBagageMapOver'));
 // };
+function getCarList(_user){
+	var selector = {owner: _user};
+	if(_user == 'admin'){
+		selector = {};
+	}	
+	return cardbFind(selector);
+}
 function getCarListOfSpecifiedUser(_user, _ep){
 	var selector = {owner: _user};
 	if(_user == 'admin'){

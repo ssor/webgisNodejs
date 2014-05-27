@@ -30,22 +30,43 @@ globalEP.tail('insertCarPoint', function(_info){
 		});
 	}
 });
+exports.mobileLoginIndex = function(req, res){
+	res.render('mobileLoginIndex');	
+}
 
 exports.index = function(req, res){
-	var localEP = new EventProxy();
-	localEP.once('getCarListOver', function(_cars){
-		var cars = [];
-		_.each(_cars, function(_car){
-			_car.img = carTypeImageMap[_car.carType];
-			_car.mainText = _car.carID;
-			_car.subText = '配送中';
-		});
-		var content = JSON.stringify(_cars);
+	carModule.getCarList(req.session.username)
+	.then(function(_cars){
+		var f 		= function(_car){
+						_car.img 		= carTypeImageMap[_car.carType];
+						_car.mainText 	= _car.carID;
+						_car.subText 	= '配送中';
+						return _car; 
+		};
+		var cars 	= _.chain(_cars).map(f).value();
+		var content = JSON.stringify(cars);
 		res.render('mobileIndex', { _title: '车辆监控客户端', _carList: content});	
-	});
-	carModule.getCarListOfSpecifiedUser('admin', localEP);
-	// carModule.getCarListOfSpecifiedUser(req.session.username, localEP);
+	})
 	return;	
+
+		// _.each(_cars, function(_car){
+		// 	_car.img = carTypeImageMap[_car.carType];
+		// 	_car.mainText = _car.carID;
+		// 	_car.subText = '配送中';
+		// });	
+	// var localEP = new EventProxy();
+	// localEP.once('getCarListOver', function(_cars){
+	// 	var cars = [];
+	// 	_.each(_cars, function(_car){
+	// 		_car.img = carTypeImageMap[_car.carType];
+	// 		_car.mainText = _car.carID;
+	// 		_car.subText = '配送中';
+	// 	});
+	// 	var content = JSON.stringify(_cars);
+	// 	res.render('mobileIndex', { _title: '车辆监控客户端', _carList: content});	
+	// });
+	// carModule.getCarListOfSpecifiedUser('admin', localEP);	
+	// carModule.getCarListOfSpecifiedUser(req.session.username, localEP);
 	// var cars = [];
 	// cars.push({carID: 'xcar1', img: 'truck.png', mainText: 'xcar1', subText: '配送中', carType: '02'});
 	// cars.push({carID: 'JP-0002', img: 'truck.png', mainText: 'JP-0002', subText: '配送中', carType: '02'});
@@ -67,24 +88,25 @@ exports.postgps = function(req, res){
 	// console.dir(req.accepted);
 	// console.log(req.get('Content-Type'));
 	// console.dir(req.body);
-	var body = req.body;
-	var id = body.carID;
-	var Lat = body.Latitude;
-	var Lng = body.Longitude;
+	var body 		   = req.body;
+	var id 			   = body.carID;
+	var Lat 		   = body.Latitude;
+	var Lng 		   = body.Longitude;
     var sogouLongitude = body.sogouLongitude;
-    var sogouLatitude = body.sogouLatitude;
+    var sogouLatitude  = body.sogouLatitude;
+
 	console.log("id: " + id + " lat: " + Lat + " lng: " + Lng + ' ' + sogouLatitude + ' ' + sogouLongitude);
 	var point = _.findWhere(latestCarPointList, {carID: id});
 	if(point == null){
 		var latestPoint = {carID: id, lat: Lat, lng: Lng, timeStamp: timeFormater(), sogouLongitude: sogouLongitude, sogouLatitude: sogouLatitude};
 		latestCarPointList.push(latestPoint);
-		point = latestPoint;
+		point 		    = latestPoint;
 	}else{
-		point.lat = Lat;
-		point.lng = Lng;
-		point.sogouLatitude = sogouLatitude;
+		point.lat 			 = Lat;
+		point.lng 			 = Lng;
+		point.sogouLatitude  = sogouLatitude;
 		point.sogouLongitude = sogouLongitude;
-		point.timeStamp = timeFormater();
+		point.timeStamp 	 = timeFormater();
 	}
 	// latestCarPointList = _.reject(latestCarPointList, function(_point){
 	// 	return _point.carID == latestPoint.carID;

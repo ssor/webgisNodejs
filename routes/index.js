@@ -56,17 +56,6 @@ exports.checkLogin = function(req, res){
 		}).catch(function(){
 			res.send('error');
 		});
-
-		// globalEP.once('validateUser', function(_result){
-		// 	if(_result){
-		// 		req.session.nickname = "普通用户";
-		// 		res.send('ok');
-		// 	}else{
-		// 		console.log('登录错误'.error);
-		// 		res.send('error');
-		// 	}
-		// });
-		// userModule.validateUser(user, pwd, globalEP);
 	} 
 };
 exports.right = function(req, res){
